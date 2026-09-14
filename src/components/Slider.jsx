@@ -94,7 +94,16 @@ const Slider = () => {
   return (
     <section
       id="services"
-      className="relative w-full overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24"
+      className="
+        relative
+        w-full
+        overflow-hidden
+        py-12
+        font-inter
+        sm:py-16
+        md:py-20
+        lg:py-24
+      "
     >
       {/* Background Glow */}
 
@@ -105,31 +114,74 @@ const Slider = () => {
           left-1/2
           top-[58%]
           -z-10
-          h-[320px]
-          w-[500px]
+          h-[280px]
+          w-[380px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
           bg-[#dff6ff]
           opacity-70
-          blur-[90px]
+          blur-[75px]
           sm:h-[420px]
           sm:w-[700px]
+          sm:blur-[90px]
           lg:h-[500px]
           lg:w-[900px]
           lg:blur-[110px]
         "
       />
 
-      <div className="mx-auto max-w-[1400px] px-3 sm:px-6 lg:px-8">
+      <div
+        className="
+          mx-auto
+          w-full
+          max-w-[1400px]
+          px-3
+          sm:px-6
+          lg:px-8
+        "
+      >
         {/* Heading */}
 
-        <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-10 lg:mb-12">
-          <h2 className="text-3xl font-medium tracking-tight text-[#171717] sm:text-4xl md:text-5xl">
+        <div
+          className="
+            mx-auto
+            mb-8
+            max-w-2xl
+            text-center
+            sm:mb-10
+            lg:mb-12
+          "
+        >
+          <h2
+            style={{ fontFamily: "Amplesoft, sans-serif" }}
+            className="
+              text-3xl
+              font-medium
+              tracking-tight
+              text-[#171717]
+              sm:text-4xl
+              md:text-5xl
+            "
+          >
             everything your home needs
           </h2>
 
-          <p className="mx-auto mt-3 max-w-md px-2 text-sm leading-6 text-gray-500 sm:mt-4 sm:px-0 sm:text-base">
+          <p
+            className="
+              mx-auto
+              mt-3
+              max-w-md
+              px-2
+              font-inter
+              text-sm
+              leading-6
+              text-gray-500
+              sm:mt-4
+              sm:px-0
+              sm:text-base
+            "
+          >
             From quick repairs to essential home services, find the right
             professional with Ekhon.
           </p>
@@ -141,7 +193,7 @@ const Slider = () => {
           className="
             relative
             mx-auto
-            h-[400px]
+            h-[360px]
             w-full
             max-w-[1280px]
             sm:h-[430px]
@@ -191,146 +243,183 @@ const Slider = () => {
 
         {/* Controls */}
 
-     <div className="mt-2 flex flex-col items-center gap-4">
-  {/* Navigation */}
+        <div
+          className="
+            mt-1
+            flex
+            flex-col
+            items-center
+            gap-4
+            sm:mt-2
+          "
+        >
+          {/* Navigation */}
 
-  <div
-    className="
-      flex
-      h-[82px]
-      items-center
-      gap-3
-      rounded-full
-      bg-white
-      px-4
-      shadow-[0_5px_25px_rgba(0,0,0,0.10)]
-    "
-  >
-    {/* Previous */}
+          <div
+            className="
+              flex
+              h-[72px]
+              w-auto
+              items-center
+              gap-2
+              rounded-full
+              bg-white
+              px-3
+              shadow-[0_5px_25px_rgba(0,0,0,0.10)]
+              sm:h-[82px]
+              sm:gap-3
+              sm:px-4
+            "
+          >
+            {/* Previous */}
 
-    <button
-      type="button"
-      onClick={handlePrev}
-      aria-label="Previous service"
-      className="
-        flex
-        h-10
-        w-10
-        shrink-0
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-gray-200
-        text-[#073f68]
-        transition
-        hover:bg-[#f4f9fc]
-        active:scale-95
-      "
-    >
-      <ChevronLeft size={30} strokeWidth={1.8} />
-    </button>
+            <button
+              type="button"
+              onClick={handlePrev}
+              aria-label="Previous service"
+              className="
+                flex
+                h-9
+                w-9
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-gray-200
+                text-[#073f68]
+                transition
+                hover:bg-[#f4f9fc]
+                active:scale-95
+                sm:h-10
+                sm:w-10
+              "
+            >
+              <ChevronLeft
+                size={26}
+                strokeWidth={1.8}
+                className="sm:h-[30px] sm:w-[30px]"
+              />
+            </button>
 
-    {/* Current Service */}
+            {/* Current Service */}
 
-    <div
-      className="
-        flex
-        w-[150px]
-        items-center
-        justify-center
-        gap-3
-      "
-    >
-      <div
-        className="
-          relative
-          flex
-          h-14
-          w-14
-          shrink-0
-          items-center
-          justify-center
-          overflow-hidden
-          rounded-full
-          border
-          border-gray-200
-          bg-white
-        "
-      >
-        <Image
-          src={services[currentIndex].image}
-          alt={services[currentIndex].title}
-          fill
-          className="object-contain p-1"
-        />
-      </div>
+            <div
+              className="
+                flex
+                w-[135px]
+                items-center
+                justify-center
+                gap-2
+                sm:w-[150px]
+                sm:gap-3
+              "
+            >
+              <div
+                className="
+                  relative
+                  flex
+                  h-12
+                  w-12
+                  shrink-0
+                  items-center
+                  justify-center
+                  overflow-hidden
+                  rounded-full
+                  border
+                  border-gray-200
+                  bg-white
+                  sm:h-14
+                  sm:w-14
+                "
+              >
+                <Image
+                  src={services[currentIndex].image}
+                  alt={services[currentIndex].title}
+                  fill
+                  className="object-contain p-1"
+                />
+              </div>
 
-      <span
-        className="
-          max-w-[90px]
-          truncate
-          whitespace-nowrap
-          text-sm
-          font-bold
-          text-[#073f68]
-        "
-      >
-        {services[currentIndex].title}
-      </span>
-    </div>
+              <span
+                className="
+                  max-w-[78px]
+                  truncate
+                  whitespace-nowrap
+                  text-xs
+                  font-bold
+                  text-[#073f68]
+                  sm:max-w-[90px]
+                  sm:text-sm
+                "
+              >
+                {services[currentIndex].title}
+              </span>
+            </div>
 
-    {/* Next */}
+            {/* Next */}
 
-    <button
-      type="button"
-      onClick={handleNext}
-      aria-label="Next service"
-      className="
-        flex
-        h-10
-        w-10
-        shrink-0
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-gray-200
-        text-[#073f68]
-        transition
-        hover:bg-[#f4f9fc]
-        active:scale-95
-      "
-    >
-      <ChevronRight size={30} strokeWidth={1.8} />
-    </button>
-  </div>
+            <button
+              type="button"
+              onClick={handleNext}
+              aria-label="Next service"
+              className="
+                flex
+                h-9
+                w-9
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-gray-200
+                text-[#073f68]
+                transition
+                hover:bg-[#f4f9fc]
+                active:scale-95
+                sm:h-10
+                sm:w-10
+              "
+            >
+              <ChevronRight
+                size={26}
+                strokeWidth={1.8}
+                className="sm:h-[30px] sm:w-[30px]"
+              />
+            </button>
+          </div>
 
-  {/* Pagination */}
+          {/* Pagination */}
 
-  <div className="flex items-center justify-center gap-1.5">
-    {services.map((service, index) => (
-      <button
-        key={service.title}
-        type="button"
-        onClick={() => handlePagination(index)}
-        aria-label={`Go to ${service.title}`}
-        className="flex h-4 items-center rounded-full px-0.5"
-      >
-        <motion.div
-          animate={{
-            width: currentIndex === index ? 18 : 5,
-            opacity: currentIndex === index ? 1 : 0.5,
-          }}
-          transition={{
-            duration: 0.3,
-          }}
-          className="h-1.5 rounded-full bg-[#0a4b75]"
-        />
-      </button>
-    ))}
-  </div>
-</div>
+          <div className="flex items-center justify-center gap-1">
+            {services.map((service, index) => (
+              <button
+                key={service.title}
+                type="button"
+                onClick={() => handlePagination(index)}
+                aria-label={`Go to ${service.title}`}
+                className="
+                  flex
+                  h-4
+                  items-center
+                  rounded-full
+                  px-0.5
+                "
+              >
+                <motion.div
+                  animate={{
+                    width: currentIndex === index ? 18 : 5,
+                    opacity: currentIndex === index ? 1 : 0.5,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                  }}
+                  className="h-1.5 rounded-full bg-[#0a4b75]"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -347,48 +436,62 @@ const StackCard = ({ service, position }) => {
 
   let x = "-50%";
 
-  // Left positions
+  /*
+    Mobile
+  */
+
   if (position === -1) {
-    x = "calc(-50% - 175px)";
+    x =
+      "calc(-50% - clamp(92px, 25vw, 175px))";
   }
 
   if (position === -2) {
-    x = "calc(-50% - 320px)";
+    x =
+      "calc(-50% - clamp(175px, 46vw, 320px))";
   }
 
   if (position === -3) {
-    x = "calc(-50% - 445px)";
+    x =
+      "calc(-50% - clamp(245px, 64vw, 445px))";
   }
 
-  // Right positions
   if (position === 1) {
-    x = "calc(-50% + 175px)";
+    x =
+      "calc(-50% + clamp(92px, 25vw, 175px))";
   }
 
   if (position === 2) {
-    x = "calc(-50% + 320px)";
+    x =
+      "calc(-50% + clamp(175px, 46vw, 320px))";
   }
 
   if (position === 3) {
-    x = "calc(-50% + 445px)";
+    x =
+      "calc(-50% + clamp(245px, 64vw, 445px))";
   }
 
-  // Scale
-  let scale = 0.72;
+  /*
+    Scale
+  */
+
+  let scale = 0.62;
 
   if (position === -2 || position === 2) {
-    scale = 0.8;
+    scale = 0.72;
   }
 
   if (position === -1 || position === 1) {
-    scale = 0.9;
+    scale = 0.84;
   }
 
   if (isCenter) {
     scale = 1;
   }
 
-  // Rotation
+  /*
+    Rotation
+  */
+
   let rotateY = 0;
 
   if (isLeft) {
@@ -399,7 +502,10 @@ const StackCard = ({ service, position }) => {
     rotateY = -10;
   }
 
-  // Z-index
+  /*
+    Z-index
+  */
+
   let zIndex = 3;
 
   if (position === -2 || position === 2) {
@@ -420,7 +526,7 @@ const StackCard = ({ service, position }) => {
         absolute
         left-1/2
         top-1/2
-        w-[270px]
+        w-[235px]
         sm:w-[290px]
         md:w-[305px]
         lg:w-[315px]
@@ -462,11 +568,11 @@ const ServiceCard = ({ service, small = false, align = "left" }) => {
     <div
       className={`
         overflow-hidden
-        rounded-[20px]
+        rounded-[18px]
         bg-white
         shadow-[0_8px_30px_rgba(0,0,0,0.20)]
         sm:rounded-[24px]
-        ${small ? "p-3 sm:p-4" : "p-4 sm:p-5"}
+        ${small ? "p-2.5 sm:p-4" : "p-3 sm:p-5"}
       `}
     >
       {/* Image */}
@@ -475,12 +581,12 @@ const ServiceCard = ({ service, small = false, align = "left" }) => {
         className={`
           relative
           overflow-hidden
-          rounded-[15px]
+          rounded-[13px]
           sm:rounded-[18px]
           ${
             small
-              ? "h-[135px] sm:h-[150px] lg:h-[160px]"
-              : "h-[190px] sm:h-[215px] md:h-[230px] lg:h-[240px]"
+              ? "h-[110px] sm:h-[150px] lg:h-[160px]"
+              : "h-[165px] sm:h-[215px] md:h-[230px] lg:h-[240px]"
           }
         `}
       >
@@ -492,11 +598,11 @@ const ServiceCard = ({ service, small = false, align = "left" }) => {
           className="
             pointer-events-none
             object-contain
-            p-3
+            p-2
             sm:p-4
           "
           sizes="
-            (max-width: 640px) 270px,
+            (max-width: 640px) 235px,
             (max-width: 1024px) 310px,
             330px
           "
@@ -509,16 +615,17 @@ const ServiceCard = ({ service, small = false, align = "left" }) => {
         className={`
           px-1
           pb-1
-          pt-3
+          pt-2.5
           sm:pt-4
           ${isRight ? "text-right" : "text-left"}
         `}
       >
         <h3
           className={`
+            font-inter
             font-semibold
             text-[#222]
-            ${small ? "text-sm sm:text-base" : "text-lg sm:text-xl"}
+            ${small ? "text-xs sm:text-base" : "text-base sm:text-xl"}
           `}
         >
           {service.title}
@@ -526,12 +633,13 @@ const ServiceCard = ({ service, small = false, align = "left" }) => {
 
         <p
           className={`
-            mt-1.5
+            mt-1
+            font-inter
             text-gray-500
             ${
               small
-                ? "line-clamp-2 text-[11px] leading-4 sm:text-xs sm:leading-5"
-                : "text-xs leading-5 sm:text-sm sm:leading-6"
+                ? "line-clamp-2 font-inter text-[9px] leading-3.5 sm:text-xs sm:leading-5"
+                : "text-[10px] font-inter leading-4 sm:text-sm sm:leading-6"
             }
           `}
         >

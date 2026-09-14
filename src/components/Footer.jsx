@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full px-3 pb-3 sm:px-6 lg:px-8">
+    <footer className="w-full font-inter px-3 pb-3 sm:px-6 lg:px-8">
       <div
         className="
           relative
@@ -279,6 +279,7 @@ const FooterTitle = ({ children }) => {
       className="
         text-[12px]
         font-semibold
+        font-inter
         text-[#111827]
         sm:text-[13px]
       "

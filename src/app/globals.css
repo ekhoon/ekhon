@@ -15,7 +15,14 @@
   --font-inter: "Inter", sans-serif;
 }
 
-
 html {
   scroll-behavior: smooth;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif !important;
+}
+
+.font-amplesoft {
+  font-family: "Amplesoft", sans-serif !important;
 }

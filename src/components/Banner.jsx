@@ -126,16 +126,18 @@ const Banner = () => {
 
             {/* Description */}
             <p
-              style={{ fontFamily: "Inter, sans-serif" }}
+             style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 mt-1
                 px-2
                 text-[8px]
                 leading-[1.3]
                 text-gray-600
-
+                sm:translate-x-3
+                 md:translate-x-4
+                  lg:translate-x-[-20px]
                 min-[400px]:text-[9px]
-
+                
                 sm:mt-2
                 sm:text-sm
 
@@ -267,7 +269,7 @@ const Banner = () => {
                 bg-[#073e6c]
                 text-[10px]
                 text-white
-
+                rotate-[-30deg]
                 sm:ml-2
                 sm:h-8
                 sm:w-8
@@ -300,17 +302,17 @@ const Banner = () => {
               left-[7%]
               top-[40%]
               z-20
-              w-[8%]
+              w-[9%]
 
               sm:left-[10%]
-              sm:w-[7%]
+              sm:w-[10%]
             "
           >
             <Image
               src="/Website-03.png"
               alt="Website-03"
-              width={100}
-              height={100}
+              width={300}
+              height={300}
               className="h-auto w-full"
             />
           </motion.div>
@@ -340,18 +342,18 @@ const Banner = () => {
             <Image
               src="/Website-08.png"
               alt="Website-08"
-              width={100}
-              height={100}
+              width={300}
+              height={300}
               className="
                 absolute
-                right-[8%]
+                right-[3%]
                 top-0
                 z-20
                 h-auto
                 w-[8%]
 
-                sm:right-[9%]
-                sm:w-[7%]
+                sm:right-[1%]
+                sm:w-[10%]
               "
             />
           </motion.div>
