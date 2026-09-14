@@ -49,16 +49,15 @@ const services = [
     image: "/Elements-19.svg",
   },
   {
-    title: "Pc & Security",
+    title: "PC & Security",
     description:
-      "Professional security and CCTV installation for your home.",
+      "Professional computer and security solutions for your home.",
     image: "/Elements-19.svg",
   },
 ];
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
 
   const total = services.length;
 
@@ -67,28 +66,16 @@ const Slider = () => {
   };
 
   const handleNext = () => {
-    setDirection(1);
     setCurrentIndex((prev) => getIndex(prev + 1));
   };
 
   const handlePrev = () => {
-    setDirection(-1);
     setCurrentIndex((prev) => getIndex(prev - 1));
   };
 
   const handlePagination = (index) => {
-    if (index === currentIndex) return;
-
-    const forward = getIndex(index - currentIndex);
-    const backward = getIndex(currentIndex - index);
-
-    setDirection(forward <= backward ? 1 : -1);
     setCurrentIndex(index);
   };
-
-  /* ============================================
-     GET RELATIVE POSITION
-  ============================================ */
 
   const getRelativePosition = (index) => {
     let diff = index - currentIndex;
@@ -106,11 +93,10 @@ const Slider = () => {
 
   return (
     <section
-     id="services"
-    className="relative w-full overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24">
-      {/* ============================================
-          BACKGROUND GLOW
-      ============================================ */}
+      id="services"
+      className="relative w-full overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24"
+    >
+      {/* Background Glow */}
 
       <div
         className="
@@ -136,9 +122,7 @@ const Slider = () => {
       />
 
       <div className="mx-auto max-w-[1400px] px-3 sm:px-6 lg:px-8">
-        {/* ============================================
-            HEADING
-        ============================================ */}
+        {/* Heading */}
 
         <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-10 lg:mb-12">
           <h2 className="text-3xl font-medium tracking-tight text-[#171717] sm:text-4xl md:text-5xl">
@@ -151,9 +135,7 @@ const Slider = () => {
           </p>
         </div>
 
-        {/* ============================================
-            SLIDER
-        ============================================ */}
+        {/* Slider */}
 
         <div
           className="
@@ -167,10 +149,6 @@ const Slider = () => {
             lg:h-[475px]
           "
         >
-          {/* ============================================
-              DRAG AREA
-          ============================================ */}
-
           <motion.div
             className="absolute inset-0 touch-pan-y"
             drag="x"
@@ -183,14 +161,10 @@ const Slider = () => {
               const offset = info.offset.x;
               const velocity = info.velocity.x;
 
-              /* LEFT */
-
               if (offset < -60 || velocity < -500) {
                 handleNext();
                 return;
               }
-
-              /* RIGHT */
 
               if (offset > 60 || velocity > 500) {
                 handlePrev();
@@ -199,18 +173,6 @@ const Slider = () => {
           >
             {services.map((service, index) => {
               const position = getRelativePosition(index);
-
-              /*
-              7 CARDS VISIBLE
-
-              -3
-              -2
-              -1
-               0
-              +1
-              +2
-              +3
-              */
 
               if (Math.abs(position) > 3) {
                 return null;
@@ -221,169 +183,154 @@ const Slider = () => {
                   key={service.title}
                   service={service}
                   position={position}
-                  direction={direction}
                 />
               );
             })}
           </motion.div>
         </div>
 
-        {/* ============================================
-            CONTROLS
-        ============================================ */}
+        {/* Controls */}
 
-        <div className="mt-2 flex flex-col items-center gap-4 sm:mt-4 sm:gap-5">
-          {/* ============================================
-              NAVIGATION
-          ============================================ */}
+     <div className="mt-2 flex flex-col items-center gap-4">
+  {/* Navigation */}
 
-          <div
-            className="
-              flex
-              items-center
-              gap-1.5
-              rounded-full
-              bg-white
-              p-1.5
-              shadow-[0_5px_25px_rgba(0,0,0,0.10)]
-              sm:gap-3
-              sm:p-2
-            "
-          >
-            {/* PREVIOUS */}
+  <div
+    className="
+      flex
+      h-[82px]
+      items-center
+      gap-3
+      rounded-full
+      bg-white
+      px-4
+      shadow-[0_5px_25px_rgba(0,0,0,0.10)]
+    "
+  >
+    {/* Previous */}
 
-            <button
-              onClick={handlePrev}
-              aria-label="Previous service"
-              className="
-                flex
-                h-9
-                w-9
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-gray-200
-                text-[#073f68]
-                transition
-                hover:bg-[#f4f9fc]
-                active:scale-95
-                sm:h-10
-                sm:w-10
-              "
-            >
-              <ChevronLeft size={18} strokeWidth={1.8} />
-            </button>
+    <button
+      type="button"
+      onClick={handlePrev}
+      aria-label="Previous service"
+      className="
+        flex
+        h-10
+        w-10
+        shrink-0
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-gray-200
+        text-[#073f68]
+        transition
+        hover:bg-[#f4f9fc]
+        active:scale-95
+      "
+    >
+      <ChevronLeft size={30} strokeWidth={1.8} />
+    </button>
 
-            {/* CURRENT */}
+    {/* Current Service */}
 
-            <div
-              className="
-                flex
-                min-w-[120px]
-                items-center
-                justify-center
-                gap-2
-                px-1
-                sm:min-w-[145px]
-                sm:gap-3
-                sm:px-2
-              "
-            >
-              <div
-                className="
-                  relative
-                  flex
-                  h-8
-                  w-8
-                  shrink-0
-                  items-center
-                  justify-center
-                  overflow-hidden
-                  rounded-full
-                  border
-                  border-gray-200
-                  bg-white
-                  sm:h-10
-                  sm:w-10
-                "
-              >
-                <Image
-                  src={services[currentIndex].image}
-                  alt={services[currentIndex].title}
-                  fill
-                  className="object-contain p-1 sm:p-1.5"
-                />
-              </div>
+    <div
+      className="
+        flex
+        w-[150px]
+        items-center
+        justify-center
+        gap-3
+      "
+    >
+      <div
+        className="
+          relative
+          flex
+          h-14
+          w-14
+          shrink-0
+          items-center
+          justify-center
+          overflow-hidden
+          rounded-full
+          border
+          border-gray-200
+          bg-white
+        "
+      >
+        <Image
+          src={services[currentIndex].image}
+          alt={services[currentIndex].title}
+          fill
+          className="object-contain p-1"
+        />
+      </div>
 
-              <span
-                className="
-                  max-w-[105px]
-                  truncate
-                  whitespace-nowrap
-                  text-xs
-                  font-medium
-                  text-[#073f68]
-                  sm:max-w-none
-                  sm:text-sm
-                "
-              >
-                {services[currentIndex].title}
-              </span>
-            </div>
+      <span
+        className="
+          max-w-[90px]
+          truncate
+          whitespace-nowrap
+          text-sm
+          font-bold
+          text-[#073f68]
+        "
+      >
+        {services[currentIndex].title}
+      </span>
+    </div>
 
-            {/* NEXT */}
+    {/* Next */}
 
-            <button
-              onClick={handleNext}
-              aria-label="Next service"
-              className="
-                flex
-                h-9
-                w-9
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-gray-200
-                text-[#073f68]
-                transition
-                hover:bg-[#f4f9fc]
-                active:scale-95
-                sm:h-10
-                sm:w-10
-              "
-            >
-              <ChevronRight size={18} strokeWidth={1.8} />
-            </button>
-          </div>
+    <button
+      type="button"
+      onClick={handleNext}
+      aria-label="Next service"
+      className="
+        flex
+        h-10
+        w-10
+        shrink-0
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-gray-200
+        text-[#073f68]
+        transition
+        hover:bg-[#f4f9fc]
+        active:scale-95
+      "
+    >
+      <ChevronRight size={30} strokeWidth={1.8} />
+    </button>
+  </div>
 
-          {/* ============================================
-              PAGINATION
-          ============================================ */}
+  {/* Pagination */}
 
-          <div className="flex items-center justify-center gap-1 sm:gap-1.5">
-            {services.map((service, index) => (
-              <button
-                key={service.title}
-                onClick={() => handlePagination(index)}
-                aria-label={`Go to ${service.title}`}
-                className="flex h-4 items-center rounded-full px-0.5"
-              >
-                <motion.div
-                  animate={{
-                    width: currentIndex === index ? 18 : 5,
-                    opacity: currentIndex === index ? 1 : 0.5,
-                  }}
-                  transition={{
-                    duration: 0.3,
-                  }}
-                  className="h-1.5 rounded-full bg-[#0a4b75]"
-                />
-              </button>
-            ))}
-          </div>
-        </div>
+  <div className="flex items-center justify-center gap-1.5">
+    {services.map((service, index) => (
+      <button
+        key={service.title}
+        type="button"
+        onClick={() => handlePagination(index)}
+        aria-label={`Go to ${service.title}`}
+        className="flex h-4 items-center rounded-full px-0.5"
+      >
+        <motion.div
+          animate={{
+            width: currentIndex === index ? 18 : 5,
+            opacity: currentIndex === index ? 1 : 0.5,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          className="h-1.5 rounded-full bg-[#0a4b75]"
+        />
+      </button>
+    ))}
+  </div>
+</div>
       </div>
     </section>
   );
@@ -398,18 +345,9 @@ const StackCard = ({ service, position }) => {
   const isLeft = position < 0;
   const isRight = position > 0;
 
-  /* ============================================
-     HORIZONTAL POSITION
-
-     Cards are intentionally close together.
-     This creates the same compressed look
-     as your screenshot.
-  ============================================ */
-
   let x = "-50%";
 
-  /* LEFT */
-
+  // Left positions
   if (position === -1) {
     x = "calc(-50% - 175px)";
   }
@@ -422,8 +360,7 @@ const StackCard = ({ service, position }) => {
     x = "calc(-50% - 445px)";
   }
 
-  /* RIGHT */
-
+  // Right positions
   if (position === 1) {
     x = "calc(-50% + 175px)";
   }
@@ -436,36 +373,22 @@ const StackCard = ({ service, position }) => {
     x = "calc(-50% + 445px)";
   }
 
-  /* ============================================
-     SCALE
-
-     Center = BIG
-     Near cards = medium
-     Outer cards = smaller
-  ============================================ */
-
+  // Scale
   let scale = 0.72;
 
-  if (position === -3 || position === 3) {
-    scale = 0.72;
-  }
-
   if (position === -2 || position === 2) {
-    scale = 0.80;
+    scale = 0.8;
   }
 
   if (position === -1 || position === 1) {
-    scale = 0.90;
+    scale = 0.9;
   }
 
   if (isCenter) {
     scale = 1;
   }
 
-  /* ============================================
-     ROTATION
-  ============================================ */
-
+  // Rotation
   let rotateY = 0;
 
   if (isLeft) {
@@ -476,10 +399,7 @@ const StackCard = ({ service, position }) => {
     rotateY = -10;
   }
 
-  /* ============================================
-     Z INDEX
-  ============================================ */
-
+  // Z-index
   let zIndex = 3;
 
   if (position === -2 || position === 2) {
@@ -520,7 +440,6 @@ const StackCard = ({ service, position }) => {
       }}
       transition={{
         duration: 1.15,
-   
       }}
     >
       <ServiceCard
@@ -536,11 +455,7 @@ const StackCard = ({ service, position }) => {
    SERVICE CARD
 ========================================================= */
 
-const ServiceCard = ({
-  service,
-  small = false,
-  align = "left",
-}) => {
+const ServiceCard = ({ service, small = false, align = "left" }) => {
   const isRight = align === "right";
 
   return (
@@ -554,18 +469,14 @@ const ServiceCard = ({
         ${small ? "p-3 sm:p-4" : "p-4 sm:p-5"}
       `}
     >
-      {/* ============================================
-          IMAGE
-      ============================================ */}
+      {/* Image */}
 
       <div
         className={`
           relative
           overflow-hidden
           rounded-[15px]
-         
           sm:rounded-[18px]
-
           ${
             small
               ? "h-[135px] sm:h-[150px] lg:h-[160px]"
@@ -592,9 +503,7 @@ const ServiceCard = ({
         />
       </div>
 
-      {/* ============================================
-          CONTENT
-      ============================================ */}
+      {/* Content */}
 
       <div
         className={`
@@ -605,30 +514,20 @@ const ServiceCard = ({
           ${isRight ? "text-right" : "text-left"}
         `}
       >
-        {/* TITLE */}
-
         <h3
           className={`
             font-semibold
             text-[#222]
-
-            ${
-              small
-                ? "text-sm sm:text-base"
-                : "text-lg sm:text-xl"
-            }
+            ${small ? "text-sm sm:text-base" : "text-lg sm:text-xl"}
           `}
         >
           {service.title}
         </h3>
 
-        {/* DESCRIPTION */}
-
         <p
           className={`
             mt-1.5
             text-gray-500
-
             ${
               small
                 ? "line-clamp-2 text-[11px] leading-4 sm:text-xs sm:leading-5"

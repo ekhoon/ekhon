@@ -32,9 +32,7 @@ const Footer = () => {
           lg:pt-14
         "
       >
-        {/* =====================================================
-            MAIN FOOTER CONTENT
-        ====================================================== */}
+        {/* MAIN FOOTER CONTENT */}
 
         <div
           className="
@@ -48,13 +46,11 @@ const Footer = () => {
             sm:gap-x-10
             sm:gap-y-10
 
-            lg:grid-cols-[1.25fr_0.7fr_0.7fr_1.3fr]
-            lg:gap-8
+            lg:grid-cols-[1.25fr_0.8fr_1.4fr]
+            lg:gap-10
           "
         >
-          {/* =================================================
-              BRAND
-          ================================================== */}
+          {/* BRAND */}
 
           <div>
             <p
@@ -103,9 +99,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* =================================================
-              COMPANY
-          ================================================== */}
+          {/* COMPANY + SUPPORT */}
 
           <div>
             <FooterTitle>Company</FooterTitle>
@@ -130,9 +124,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* =================================================
-              FOR PROVIDERS
-          ================================================== */}
+          {/* FOR PROVIDERS + APP */}
 
           <div>
             <FooterTitle>For Providers</FooterTitle>
@@ -142,113 +134,50 @@ const Footer = () => {
               <FooterLink>How It Works</FooterLink>
               <FooterLink>Provider Support</FooterLink>
             </div>
-          </div>
 
-          {/* =================================================
-              GET THE EKHOON APP
-          ================================================== */}
+            {/* GET THE EKHOON APP */}
 
-          <div>
-            <FooterTitle>Get the Ekhonn App</FooterTitle>
+            <div className="mt-10">
+              <FooterTitle>Get the Ekhonn App</FooterTitle>
 
-            <p
-              style={{ fontFamily: "Inter, sans-serif" }}
-              className="
-                mt-3
-                max-w-[270px]
-                text-[11px]
-                leading-[1.45]
-                text-gray-500
-              "
-            >
-              Book trusted home services anytime, anywhere.
-            </p>
-
-            {/* APP BUTTONS */}
-
-            <div className="mt-4 flex items-center gap-2">
-              {/* GOOGLE PLAY */}
-
-              <button
+              <p
+                style={{ fontFamily: "Inter, sans-serif" }}
                 className="
-                  flex
-                  h-[38px]
-                  min-w-[105px]
-                  cursor-pointer
-                  items-center
-                  gap-2
-                  rounded-[6px]
-                  bg-black
-                  px-2.5
-                  text-white
-                  transition
-                  hover:scale-[1.03]
+                  mt-3
+                  max-w-[270px]
+                  text-[11px]
+                  leading-[1.45]
+                  text-gray-500
                 "
               >
-                <Play
-                  size={17}
-                  fill="white"
-                  strokeWidth={1.5}
-                />
+                Book trusted home services anytime, anywhere.
+              </p>
 
-                <div className="text-left leading-none">
-                  <span className="block text-[6px] uppercase">
-                    Get it on
-                  </span>
+              <div className="mt-4 flex flex-wrap items-center gap-2">
+                {/* GOOGLE PLAY */}
+                 <Image src='/N Elements-20.svg'
+                  alt="N Elements-20.svg"
+                   width={100}
+                   height={100}
+                   
+                   />
+                
 
-                  <span
-                    style={{ fontFamily: "Inter, sans-serif" }}
-                    className="mt-0.5 block text-[12px] font-medium"
-                  >
-                    Google Play
-                  </span>
-                </div>
-              </button>
+                {/* APP STORE */}
 
-              {/* APP STORE */}
+        
+                  <Image src='/N Elements-28.svg'
+                  alt="N Elements-28.svg"
+                   width={100}
+                   height={100} />
 
-              <button
-                className="
-                  flex
-                  h-[38px]
-                  min-w-[105px]
-                  cursor-pointer
-                  items-center
-                  gap-2
-                  rounded-[6px]
-                  bg-black
-                  px-2.5
-                  text-white
-                  transition
-                  hover:scale-[1.03]
-                "
-              >
-                <Apple
-                  size={18}
-                  fill="white"
-                  strokeWidth={1.5}
-                />
-
-                <div className="text-left leading-none">
-                  <span className="block text-[6px]">
-                    Download on the
-                  </span>
-
-                  <span
-                    style={{ fontFamily: "Inter, sans-serif" }}
-                    className="mt-0.5 block text-[12px] font-medium"
-                  >
-                    App Store
-                  </span>
-                </div>
-              </button>
+             
+              </div>
             </div>
           </div>
         </div>
 
-        {/* =====================================================
-            DIVIDER + COPYRIGHT
-        ====================================================== */}
+        {/* DIVIDER + COPYRIGHT */}
 
         <div
           className="
@@ -302,27 +231,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* =====================================================
-            HUGE EKHOON LOGO
-        ====================================================== */}
+        {/* HUGE EKHOON LOGO */}
 
         <div
           className="
             pointer-events-none
             absolute
-          
             left-1/2
             z-10
             w-[920px]
             -translate-x-1/2
 
-           
             sm:w-[750px]
 
             md:bottom-[-60px]
             md:w-[900px]
 
-       
             lg:w-[1050px]
 
             xl:w-[1150px]
@@ -346,9 +270,7 @@ const Footer = () => {
   );
 };
 
-/* =============================================================
-   FOOTER TITLE
-============================================================= */
+/* FOOTER TITLE */
 
 const FooterTitle = ({ children }) => {
   return (
@@ -366,13 +288,12 @@ const FooterTitle = ({ children }) => {
   );
 };
 
-/* =============================================================
-   FOOTER LINK
-============================================================= */
+/* FOOTER LINK */
 
 const FooterLink = ({ children }) => {
   return (
     <button
+      type="button"
       style={{ fontFamily: "Inter, sans-serif" }}
       className="
         block
@@ -391,13 +312,12 @@ const FooterLink = ({ children }) => {
   );
 };
 
-/* =============================================================
-   SOCIAL ICON
-============================================================= */
+/* SOCIAL ICON */
 
 const SocialIcon = ({ children }) => {
   return (
     <button
+      type="button"
       className="
         flex
         h-[21px]

@@ -85,6 +85,7 @@ const Banner = () => {
                 sm:text-4xl
                 md:text-5xl
                 lg:text-6xl
+                 lg:mr-[60px]
               "
             >
               your home needs it
@@ -266,7 +267,7 @@ const Banner = () => {
                 bg-[#073e6c]
                 text-[10px]
                 text-white
-                rotate-[-400deg]
+
                 sm:ml-2
                 sm:h-8
                 sm:w-8
