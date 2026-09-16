@@ -146,7 +146,7 @@ const Banner = () => {
                 lg:text-base
               "
             >
-             ,
+              Find trusted professionals for your home,
               <br />
               whenever you need them.
             </p>
