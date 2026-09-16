@@ -32,7 +32,6 @@ const Banner = () => {
             h-auto
             w-full
             -mt-2
-
             sm:-mt-4
             sm:w-[95%]
             sm:translate-x-0
@@ -147,7 +146,7 @@ const Banner = () => {
                 lg:text-base
               "
             >
-              Find trusted professionals for your home,
+             ,
               <br />
               whenever you need them.
             </p>
