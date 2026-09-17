@@ -28,17 +28,20 @@ const Banner = () => {
           height={800}
           priority
           className="
+         
             block
             h-auto
             w-full
             -mt-2
-            sm:-mt-4
-            sm:w-[95%]
-            sm:translate-x-0
+            sm:mt-2
+            
+            sm:translate-x-[-20px]
+            
+           
 
             md:-mt-6
             md:w-[95%]
-            md:translate-x-0
+            md:-translate-z-16
 
             lg:-mt-60
             lg:w-[80%]
@@ -57,158 +60,189 @@ const Banner = () => {
               HEADING + DESCRIPTION
           ======================================================== */}
           <div
-            className="
-              absolute
-              left-1/2
-              top-[5%]
-              z-20
-              w-full
-              -translate-x-1/2
-              px-2
-              text-center
+  className="
+    absolute
+    left-1/2
+    top-[5%]
+    z-20
+    w-full
+    -translate-x-1/2
+    px-2
+    text-center
 
-              sm:top-[5%]
-              sm:px-0
-            "
-          >
-            <h1
-              style={{ fontFamily: "Amplesoft, sans-serif" }}
-              className="
-                text-[18px]
-                font-semibold
-                leading-[1.05]
-                text-black
+    min-[400px]:top-[5%]
+    min-[400px]:px-3
 
-                min-[400px]:text-[22px]
+    sm:top-[5%]
+    sm:px-0
 
-                sm:text-4xl
-                md:text-5xl
-                lg:text-6xl
-                 lg:mr-[60px]
-              "
-            >
-              your home needs it
+    md:top-[5%]
 
-              <br />
+    lg:top-[5%]
+  "
+>
+  <h1
+    style={{ fontFamily: "Amplesoft, sans-serif" }}
+    className="
+      text-[18px]
+      font-semibold
+      leading-[1.05]
+      text-black
 
-              <span
-                className="
-                  inline-flex
-                  items-center
-                  justify-center
-                  gap-1
+      min-[400px]:text-[22px]
 
-                  sm:gap-2
-                  md:gap-3
-                "
-              >
-                <Image
-                  src="/Logo-10.svg"
-                  alt="Logo"
-                  width={100}
-                  height={45}
-                  className="
-                    h-auto
-                    w-[55px]
+      sm:text-4xl
+      md:text-5xl
+      lg:text-6xl
 
-                    min-[400px]:w-[65px]
+      lg:mr-[60px]
+    "
+  >
+    your home needs it
 
-                    sm:w-[70px]
-                    md:w-[85px]
-                    lg:w-[100px]
-                  "
-                />
+    <br />
 
-                <span>gets it done</span>
-              </span>
-            </h1>
+    <span
+      className="
+        inline-flex
+        items-center
+        justify-center
+        gap-1
 
-            {/* Description */}
-            <p
-             style={{ fontFamily: "Inter, sans-serif" }}
-              className="
-                mt-1
-                px-2
-                text-[8px]
-                leading-[1.3]
-                text-gray-600
-                sm:translate-x-3
-                 md:translate-x-4
-                  lg:translate-x-[-20px]
-                min-[400px]:text-[9px]
-                
-                sm:mt-2
-                sm:text-sm
+        min-[400px]:gap-1.5
 
-                md:mt-3
-                md:text-base
+        sm:gap-2
+        md:gap-3
+      "
+    >
+      <Image
+        src="/Logo-10.svg"
+        alt="Logo"
+        width={100}
+        height={45}
+        className="
+          h-auto
+          w-[30px]
 
-                lg:text-base
-              "
-            >
-              Find trusted professionals for your home,
-              <br />
-              whenever you need them.
-            </p>
-          </div>
+          min-[400px]:w-[65px]
+
+          sm:w-[70px]
+          md:w-[85px]
+
+          lg:w-[100px]
+        "
+      />
+
+      <span>gets it done</span>
+    </span>
+  </h1>
+
+  {/* Description */}
+  <p
+    style={{ fontFamily: "Inter, sans-serif" }}
+    className="
+      mt-1
+      px-2
+      text-[8px]
+      leading-[1.3]
+      text-gray-600
+
+      min-[400px]:text-[9px]
+
+      sm:mt-2
+      sm:translate-x-3
+      sm:text-sm
+
+      md:mt-3
+      md:translate-x-4
+      md:text-base
+
+      lg:translate-x-[-20px]
+      lg:text-base
+    "
+  >
+    Find trusted professionals for your home,
+    <br />
+    whenever you need them.
+  </p>
+</div>
 
           {/* =======================================================
               MAIN CENTER ITEM
           ======================================================== */}
-          <Image
-            src="/Website-09.png"
-            alt="Home service"
-            width={200}
-            height={200}
-            className="
-              absolute
-              left-1/2
-              top-[37%]
-              z-10
-              w-[14%]
-              min-w-[40px]
-              max-w-[150px]
-              -translate-x-1/2
-              object-cover
+        <Image
+  src="/Website-09.png"
+  alt="Home service"
+  width={200}
+  height={200}
+  className="
+    absolute
+    left-1/2
+    top-[38%]
 
-              sm:top-[38%]
-              sm:w-[16vw]
-              sm:min-w-[55px]
+    z-10
+    w-[14%]
+    min-w-[40px]
+    max-w-[150px]
+    -translate-x-1/3
+    object-cover
 
-              md:w-[17vw]
+    min-[400px]:top-[39%]
+    min-[400px]:w-[13%]
+    min-[400px]:min-w-[45px]
+    min-[400px]:translate-x-[-20px]
 
-              lg:w-[22vw]
-              lg:max-w-[150px]
-            "
-          />
+    sm:top-[37%]
+    sm:w-[16vw]
+    sm:min-w-[55px]
+
+    md:top-[38%]
+    md:w-[14vw]
+
+    lg:top-[37%]
+    lg:w-[18vw]
+    lg:max-w-[150px]
+
+    xl:top-[37%]
+    xl:w-[22vw]
+    xl:max-w-[160px]
+   xl:translate-x-[-100px]
+  "
+/>
 
           {/* =======================================================
               APPLICATION IMAGE
           ======================================================== */}
-          <Image
-            src="/Website-11.png"
-            alt="Application"
-            width={950}
-            height={950}
-            className="
-              absolute
-              left-1/2
-              top-[46%]
-              z-10
-              h-auto
-              w-[72%]
-              -translate-x-1/2
+        <Image
+  src="/Website-11.png"
+  alt="Application"
+  width={950}
+  height={950}
+  className="
+    absolute
+    left-1/2
+    top-[51%]
+    z-10
+    h-auto
+    w-[76%]
+    -translate-x-1/2
 
-              min-[400px]:w-[68%]
+    min-[400px]:top-[50%]
+    min-[400px]:w-[72%]
 
-              sm:top-[47.5%]
-              sm:w-[63%]
+    sm:top-[44%]
+    sm:w-[66%]
 
-              md:w-[64%]
+    md:top-[46%]
+    md:w-[64%]
 
-              lg:w-[65%]
-            "
-          />
+    lg:top-[46%]
+    lg:w-[65%]
+
+    xl:top-[46%]
+    xl:w-[65%]
+  "
+/>
 
           {/* =======================================================
               GET STARTED BUTTON
@@ -360,122 +394,190 @@ const Banner = () => {
           {/* =======================================================
               WEBSITE 04
           ======================================================== */}
-          <motion.div
-            animate={{ y: [0, -4, 0] }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="
-              absolute
-              left-[21%]
-              top-[55%]
-              z-20
-              w-[9%]
+        <motion.div
+  animate={{ y: [0, -4, 0] }}
+  transition={{
+    duration: 8,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="
+    absolute
+    left-[18%]
+    top-[58%]
+    z-20
+    w-[13%]
+    max-w-[120px]
 
-              sm:left-[23%]
-              sm:w-[8.5%]
-            "
-          >
-            <Image
-              src="/Website-04.png"
-              alt="Website-04"
-              width={120}
-              height={120}
-              className="h-auto w-full"
-            />
-          </motion.div>
+    min-[400px]:left-[20%]
+    min-[400px]:top-[54%]
+    min-[400px]:w-[11%]
+
+    sm:left-[22%]
+    sm:top-[55%]
+    sm:w-[9%]
+
+    md:left-[20%]
+    md:top-[58%]
+    md:w-[9%]
+
+    lg:left-[20%]
+    lg:top-[58%]
+    lg:w-[9%]
+
+    xl:left-[21%]
+    xl:top-[55%]
+    xl:w-[9%]
+  "
+>
+  <Image
+    src="/Website-04.png"
+    alt="Website-04"
+    width={120}
+    height={120}
+    className="h-auto w-full"
+  />
+</motion.div>
 
           {/* =======================================================
               WEBSITE 05
           ======================================================== */}
-          <motion.div
-            animate={{ y: [0, -4, 0] }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="
-              absolute
-              left-[29%]
-              top-[40%]
-              z-20
-              w-[9%]
+         <motion.div
+  animate={{ y: [0, -4, 0] }}
+  transition={{
+    duration: 8,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="
+    absolute
+    left-[34%]
+    top-[47%]
+    z-20
+    w-[8%]
 
-              sm:left-[33%]
-              sm:w-[8.5%]
-            "
-          >
-            <Image
-              src="/Website-05.png"
-              alt="Website-05"
-              width={120}
-              height={120}
-              className="h-auto w-full"
-            />
+    min-[400px]:left-[35%]
+    min-[400px]:top-[48%]
+    min-[400px]:w-[8%]
+
+    sm:left-[33%]
+    sm:top-[4%]
+    sm:w-[1%]
+
+    md:left-[29%]
+    md:top-[80%]
+    md:w-[8%]
+
+    lg:left-[33%]
+    lg:top-[42%]
+    lg:w-[8%]
+  "
+>
+  <Image
+    src="/Website-05.png"
+    alt="Website-05"
+    width={120}
+    height={120}
+    className="h-auto w-full"
+  />
           </motion.div>
 
           {/* =======================================================
               WEBSITE 06
           ======================================================== */}
-          <motion.div
-            animate={{ y: [0, -4, 0] }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="
-              absolute
-              right-[29%]
-              top-[40%]
-              z-20
-              w-[9%]
+         <motion.div
+  animate={{ y: [0, -4, 0] }}
+  transition={{
+    duration: 8,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="
+    absolute
+    right-[28%]
+    top-[46%]
+    z-20
+    w-[9%]
+    max-w-[120px]
 
-              sm:right-[33%]
-              sm:w-[8.5%]
-            "
-          >
-            <Image
-              src="/Website-06.png"
-              alt="Website-06"
-              width={120}
-              height={120}
-              className="h-auto w-full"
-            />
-          </motion.div>
+    min-[400px]:right-[27%]
+    min-[400px]:top-[45%]
+    min-[400px]:w-[9%]
+
+    sm:right-[33%]
+    sm:top-[38%]
+    sm:w-[9%]
+
+    md:right-[29%]
+    md:top-[40%]
+    md:w-[9%]
+
+    lg:right-[29%]
+    lg:top-[40%]
+    lg:w-[9%]
+
+    xl:right-[34%]
+    xl:top-[40%]
+    xl:w-[9%]
+  "
+>
+  <Image
+    src="/Website-06.png"
+    alt="Website-06"
+    width={120}
+    height={120}
+    className="h-auto w-full"
+  />
+</motion.div>
 
           {/* =======================================================
               WEBSITE 07
           ======================================================== */}
-          <motion.div
-            animate={{ y: [0, -4, 0] }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="
-              absolute
-              right-[21%]
-              top-[55%]
-              z-20
-              w-[9%]
+       <motion.div
+  animate={{ y: [0, -4, 0] }}
+  transition={{
+    duration: 8,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="
+    absolute
+    right-[16%]
+    top-[55%]
+    z-20
+    w-[9%]
+    max-w-[120px]
 
-              sm:right-[25%]
-              sm:w-[8.5%]
-            "
-          >
-            <Image
-              src="/Website-07.png"
-              alt="Website-07"
-              width={120}
-              height={120}
-              className="h-auto w-full"
-            />
-          </motion.div>
+    min-[400px]:right-[18%]
+    min-[400px]:top-[55%]
+    min-[400px]:w-[9%]
+
+    sm:right-[25%]
+    sm:top-[48%]
+    sm:w-[9%]
+
+    md:right-[21%]
+    md:top-[52%]
+  
+    md:w-[9%]
+
+    lg:right-[2%]
+    lg:top-[55%]
+    lg:w-[9%]
+
+    xl:right-[24%]
+    xl:top-[55%]
+    xl:w-[9%]
+  "
+>
+  <Image
+    src="/Website-07.png"
+    alt="Website-07"
+    width={120}
+    height={120}
+    className="h-auto w-full"
+  />
+</motion.div>
 
         </div>
       </div>

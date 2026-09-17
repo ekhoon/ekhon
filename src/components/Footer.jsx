@@ -101,80 +101,82 @@ const Footer = () => {
 
           {/* COMPANY + SUPPORT */}
 
-          <div>
-            <FooterTitle>Company</FooterTitle>
+        <div className="grid grid-cols-2 gap-6 md:grid md:grid-cols-1">
+  {/* COMPANY */}
+  <div>
+    <FooterTitle>Company</FooterTitle>
 
-            <div className="mt-5 space-y-2">
-              <FooterLink>About Us</FooterLink>
-              <FooterLink>How It Works</FooterLink>
-              <FooterLink>Our Services</FooterLink>
-              <FooterLink>Contact Us</FooterLink>
-            </div>
+    <div className="mt-5 space-y-2">
+      <FooterLink>About Us</FooterLink>
+      <FooterLink>How It Works</FooterLink>
+      <FooterLink>Our Services</FooterLink>
+      <FooterLink>Contact Us</FooterLink>
+    </div>
+  </div>
 
-            {/* SUPPORT */}
+  {/* SUPPORT */}
+  <div>
+    <FooterTitle>Support</FooterTitle>
 
-            <div className="mt-7">
-              <FooterTitle>Support</FooterTitle>
+    <div className="mt-5 space-y-2">
+      <FooterLink>Help Center</FooterLink>
+      <FooterLink>FAQs</FooterLink>
+      <FooterLink>Contact Support</FooterLink>
+    </div>
+  </div>
+</div>
 
-              <div className="mt-5 space-y-2">
-                <FooterLink>Help Center</FooterLink>
-                <FooterLink>FAQs</FooterLink>
-                <FooterLink>Contact Support</FooterLink>
-              </div>
-            </div>
-          </div>
+        <div>
+            {/* FOR PROVIDERS + APP */}
 
-          {/* FOR PROVIDERS + APP */}
+         <div className="grid grid-cols-2 gap-6 md:grid md:grid-cols-1">
+  {/* FOR PROVIDERS */}
+  <div>
+    <FooterTitle>For Providers</FooterTitle>
 
-          <div>
-            <FooterTitle>For Providers</FooterTitle>
+    <div className="mt-5 space-y-2">
+      <FooterLink>Become a Provider</FooterLink>
+      <FooterLink>How It Works</FooterLink>
+      <FooterLink>Provider Support</FooterLink>
+    </div>
+  </div>
 
-            <div className="mt-5 space-y-2">
-              <FooterLink>Become a Provider</FooterLink>
-              <FooterLink>How It Works</FooterLink>
-              <FooterLink>Provider Support</FooterLink>
-            </div>
+  {/* GET THE EKHOON APP */}
+  <div>
+    <FooterTitle>Get the Ekhonn App</FooterTitle>
 
-            {/* GET THE EKHOON APP */}
+    <p
+      style={{ fontFamily: "Inter, sans-serif" }}
+      className="
+        mt-3
+        max-w-[270px]
+        text-[11px]
+        leading-[1.45]
+        text-gray-500
+      "
+    >
+      Book trusted home services anytime, anywhere.
+    </p>
 
-            <div className="mt-10">
-              <FooterTitle>Get the Ekhonn App</FooterTitle>
+    <div className="mt-4 flex flex-wrap items-center gap-2">
+      {/* GOOGLE PLAY */}
+      <Image
+        src="/N Elements-20.svg"
+        alt="Google Play"
+        width={100}
+        height={100}
+      />
 
-              <p
-                style={{ fontFamily: "Inter, sans-serif" }}
-                className="
-                  mt-3
-                  max-w-[270px]
-                  text-[11px]
-                  leading-[1.45]
-                  text-gray-500
-                "
-              >
-                Book trusted home services anytime, anywhere.
-              </p>
-
-              <div className="mt-4 flex flex-wrap items-center gap-2">
-                {/* GOOGLE PLAY */}
-                 <Image src='/N Elements-20.svg'
-                  alt="N Elements-20.svg"
-                   width={100}
-                   height={100}
-                   
-                   />
-                
-
-                {/* APP STORE */}
-
-        
-                  <Image src='/N Elements-28.svg'
-                  alt="N Elements-28.svg"
-                   width={100}
-                   height={100} />
-
-             
-              </div>
-            </div>
-          </div>
+      {/* APP STORE */}
+      <Image
+        src="/N Elements-28.svg"
+        alt="App Store"
+        width={100}
+        height={100}
+      />
+    </div>
+  </div>
+</div>
         </div>
 
         {/* DIVIDER + COPYRIGHT */}
@@ -230,41 +232,52 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        </div>
 
         {/* HUGE EKHOON LOGO */}
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            left-1/2
-            z-10
-            w-[920px]
-            -translate-x-1/2
+ <div
+  className="
+    pointer-events-none
+    absolute
+    left-1/2
+    bottom-[-20px]
+    z-10
+    w-[calc(100%-16px)]
+    -translate-x-1/2
 
-            sm:w-[750px]
+    min-[400px]:bottom-[-25px]
+    min-[400px]:w-[calc(100%-20px)]
 
-            md:bottom-[-60px]
-            md:w-[900px]
+    sm:bottom-[-35px]
+    sm:w-[calc(100%-32px)]
 
-            lg:w-[1050px]
+    md:bottom-[-45px]
+    md:w-[calc(100%-40px)]
 
-            xl:w-[1150px]
-          "
-        >
-          <Image
-            src="/Elements-22.svg"
-            alt=""
-            width={1200}
-            height={400}
-            priority
-            className="
-              h-auto
-              w-full
-              object-contain
-            "
-          />
-        </div>
+    lg:bottom-[-55px]
+    lg:w-[calc(100%-48px)]
+
+    xl:bottom-[-65px]
+    xl:w-[calc(100%-64px)]
+
+    max-w-[1200px]
+  "
+>
+  <Image
+    src="/Elements-22.svg"
+    alt=""
+    width={1200}
+    height={400}
+    priority
+    className="
+      block
+      h-auto
+      w-full
+      object-contain
+    "
+  />
+</div>
       </div>
     </footer>
   );
