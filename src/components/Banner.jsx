@@ -198,6 +198,7 @@ const Banner = () => {
 
     md:top-[38%]
     md:w-[14vw]
+    md:translate-x-[-70px]
 
     lg:top-[37%]
     lg:w-[18vw]
@@ -233,8 +234,9 @@ const Banner = () => {
     sm:top-[44%]
     sm:w-[66%]
 
-    md:top-[46%]
-    md:w-[64%]
+    md:top-[47%]
+    md:w-[60%]
+
 
     lg:top-[46%]
     lg:w-[65%]
@@ -418,7 +420,7 @@ const Banner = () => {
     sm:w-[9%]
 
     md:left-[20%]
-    md:top-[58%]
+    md:top-[54%]
     md:w-[9%]
 
     lg:left-[20%]
@@ -465,7 +467,7 @@ const Banner = () => {
     sm:w-[1%]
 
     md:left-[29%]
-    md:top-[80%]
+    md:top-[45%]
     md:w-[8%]
 
     lg:left-[33%]
@@ -508,8 +510,8 @@ const Banner = () => {
     sm:top-[38%]
     sm:w-[9%]
 
-    md:right-[29%]
-    md:top-[40%]
+    md:right-[33%]
+    md:top-[45%]
     md:w-[9%]
 
     lg:right-[29%]
@@ -556,8 +558,8 @@ const Banner = () => {
     sm:top-[48%]
     sm:w-[9%]
 
-    md:right-[21%]
-    md:top-[52%]
+    md:right-[22%]
+    md:top-[55%]
   
     md:w-[9%]
 
