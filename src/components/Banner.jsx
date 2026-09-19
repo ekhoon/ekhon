@@ -538,7 +538,7 @@ const Banner = () => {
        <motion.div
   animate={{ y: [0, -2, 0] }}
   transition={{
-    duration: 1,
+    duration: 3,
     repeat: Infinity,
     ease: "easeInOut",
   }}
