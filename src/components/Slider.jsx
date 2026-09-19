@@ -412,7 +412,7 @@ const Slider = () => {
                     opacity: currentIndex === index ? 1 : 0.5,
                   }}
                   transition={{
-                    duration: 0.3,
+                    duration: 2,
                   }}
                   className="h-1.5 rounded-full bg-[#0a4b75]"
                 />
@@ -470,10 +470,7 @@ const StackCard = ({ service, position }) => {
       "calc(-50% + clamp(245px, 64vw, 445px))";
   }
 
-  /*
-    Scale
-  */
-
+  
   let scale = 0.62;
 
   if (position === -2 || position === 2) {
@@ -488,9 +485,7 @@ const StackCard = ({ service, position }) => {
     scale = 1;
   }
 
-  /*
-    Rotation
-  */
+ 
 
   let rotateY = 0;
 
@@ -502,10 +497,7 @@ const StackCard = ({ service, position }) => {
     rotateY = -10;
   }
 
-  /*
-    Z-index
-  */
-
+  
   let zIndex = 3;
 
   if (position === -2 || position === 2) {
