@@ -328,7 +328,7 @@ const Banner = () => {
           <motion.div
             animate={{ y: [0, -3, 0] }}
             transition={{
-              duration: 1,
+              duration: 3,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -358,7 +358,7 @@ const Banner = () => {
           <motion.div
             animate={{ y: [0, -3, 0] }}
             transition={{
-              duration: 1,
+              duration: 3,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -399,7 +399,7 @@ const Banner = () => {
         <motion.div
   animate={{ y: [0, -3, 0] }}
   transition={{
-    duration: 1,
+    duration: 3,
     repeat: Infinity,
     ease: "easeInOut",
   }}
@@ -447,7 +447,7 @@ const Banner = () => {
          <motion.div
   animate={{ y: [0, -3, 0] }}
   transition={{
-    duration: 1,
+    duration: 3,
     repeat: Infinity,
     ease: "easeInOut",
   }}
@@ -488,9 +488,9 @@ const Banner = () => {
               WEBSITE 06
           ======================================================== */}
          <motion.div
-  animate={{ y: [0, -4, 0] }}
+  animate={{ y: [0, -3, 0] }}
   transition={{
-    duration: 1,
+    duration: 3,
     repeat: Infinity,
     ease: "easeInOut",
   }}
@@ -536,7 +536,7 @@ const Banner = () => {
               WEBSITE 07
           ======================================================== */}
        <motion.div
-  animate={{ y: [0, -2, 0] }}
+  animate={{ y: [0, -3, 0] }}
   transition={{
     duration: 3,
     repeat: Infinity,

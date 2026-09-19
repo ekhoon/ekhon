@@ -71,7 +71,7 @@ const Navbar = () => {
       <div
         className="
           h-[58px]
-
+        
           min-[400px]:h-[64px]
 
           sm:h-[72px]
@@ -90,9 +90,15 @@ const Navbar = () => {
           top-0
           z-50
           w-full
-          bg-transparent
+        
+backdrop-blur-md
+border-b
+border-gray-200/40
+shadow-[0_2px_15px_rgba(0,0,0,0.05)]
+        
           transition-transform
           duration-300
+          
           ease-in-out
 
           ${
