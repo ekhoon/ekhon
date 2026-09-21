@@ -110,29 +110,29 @@ const Navbar = () => {
 >
         <div
           className="
-            px-3
-            py-3
+           px-3
+    py-3
 
-            min-[400px]:px-4
-            min-[400px]:py-4
+    min-[400px]:px-4
+    min-[400px]:py-4
 
-            sm:px-6
-            sm:py-5
+    sm:px-6
+    sm:py-5
 
-            md:px-12
-            md:py-5
+    md:px-12
+    md:py-5
 
-            lg:px-20
+    lg:px-20
           "
         >
           <nav
             className="
-              mx-auto
-              flex
-              w-full
-              max-w-7xl
-              items-center
-              justify-between
+            mx-auto
+      flex
+      w-full
+      max-w-[1440px]
+      items-center
+      justify-between
             "
           >
             {/* Logo */}
