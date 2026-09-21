@@ -525,7 +525,7 @@ const Banner = () => {
 >
   <Image
     src="/Website-06.png"
-    alt="Website-06"
+    alt="Ekhoon trusted home service platform in Bangladesh"
     width={120}
     height={120}
     className="h-auto w-full"
