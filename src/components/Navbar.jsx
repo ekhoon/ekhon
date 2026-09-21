@@ -160,6 +160,7 @@ const Navbar = () => {
                 gap-1
                 rounded-full
                 border
+                justify-center
                 border-gray-100
                 bg-[#f5f6f9]
                 shadow-sm
@@ -178,7 +179,7 @@ const Navbar = () => {
                     className={`
                       rounded-full
                       px-3
-                      py-1.5
+                      py-2
                       text-sm
                       font-medium
                       transition-all

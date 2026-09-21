@@ -3,8 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "ekhoon - এখন",
-  description: "Build by ekhoon",
+  title: "Ekhoon | Find Trusted Home Service Providers in Bangladesh",
+  description: "Find trusted home service providers near you with Ekhoon. Connect with available technicians for home repairs, maintenance, and other services in Bangladesh.",
 };
 
 export default function RootLayout({ children }) {
