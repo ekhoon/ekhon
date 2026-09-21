@@ -25,14 +25,14 @@ const Navbar = () => {
   const [activeItem, setActiveItem] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
-
+  const [isScrolled, setIsScrolled] = useState(false);
  useEffect(() => {
   let lastScrollY = window.scrollY;
   let scrollUpDistance = 0;
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
-
+    setIsScrolled(currentScrollY > 50);
     if (currentScrollY <= 50) {
       setShowNavbar(true);
       scrollUpDistance = 0;
@@ -84,30 +84,30 @@ const Navbar = () => {
 
       {/* Navbar */}
       <header
-        className={`
-          fixed
-          left-0
-          top-0
-          z-50
-          w-full
-        
-backdrop-blur-md
-border-b
-border-gray-200/40
-shadow-[0_2px_15px_rgba(0,0,0,0.05)]
-        
-          transition-transform
-          duration-300
-          
-          ease-in-out
+  className={`
+    fixed
+    left-0
+    top-0
+    z-50
+    w-full
 
-          ${
-            showNavbar
-              ? "translate-y-0"
-              : "-translate-y-full"
-          }
-        `}
-      >
+    ${
+      isScrolled
+        ? "bg-white/70 backdrop-blur-md border-b border-gray-200/40 shadow-[0_2px_15px_rgba(0,0,0,0.05)]"
+        : "bg-transparent"
+    }
+
+    transition-transform
+    duration-300
+    ease-in-out
+
+    ${
+      showNavbar
+        ? "translate-y-0"
+        : "-translate-y-full"
+    }
+  `}
+>
         <div
           className="
             px-3
