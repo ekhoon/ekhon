@@ -54,7 +54,7 @@ export const metadata = {
     description:
       "Find trusted home service providers in Bangladesh with Ekhoon.",
     url: "https://ekhoon.com",
-    siteName: "Ekhoon",
+    siteName: "Ekhoon - এখন",
     locale: "en_BD",
     type: "website",
   },

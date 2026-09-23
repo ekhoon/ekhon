@@ -238,8 +238,9 @@ const Banner = () => {
 
     min-[400px]:top-[50%]
     min-[400px]:w-[72%]
-       [@media(max-height:600px)]:top-[60%]     
-       [@media(max-height:600px)]:translate-x-[-350px]     
+       [@media(max-height:600px)]:top-[55%]     
+       [@media(max-height:600px)]:w-[60%]     
+       [@media(max-height:600px)]:translate-x-[-300px]     
     sm:top-[44%]
     sm:w-[66%]
 
