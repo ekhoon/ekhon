@@ -17,6 +17,9 @@ const Banner = () => {
           rounded-[20px]
           sm:rounded-[32px]
           [@media(max-height:600px)]:min-h-screen
+          [@media(max-height:600px)]:pb-20
+          [@media(min-width:1024px)_and_(max-width:1279px)]:pb-48
+     
         "
       >
         {/* =========================================================
@@ -39,6 +42,8 @@ const Banner = () => {
             [@media(max-height:600px)]:w-[100%]
             [@media(max-height:600px)]:translate-y-[180px]
             [@media(max-height:600px)]:translate-x-[-60px]
+            [@media(min-width:1024px)_and_(max-width:1279px)]:translate-y-[180px]
+            [@media(min-width:1024px)_and_(max-width:1279px)]:translate-x-[30px]
             sm:translate-x-[-20px]
             
            
@@ -95,6 +100,7 @@ const Banner = () => {
 
       min-[400px]:text-[22px]
             [@media(max-height:600px)]:text-[52px]
+            [@media(min-width:1024px)_and_(max-width:1279px)]:text-[55px]
       sm:text-4xl
       md:text-5xl
       lg:text-6xl
@@ -199,6 +205,8 @@ const Banner = () => {
             [@media(max-height:600px)]:w-[120px]
             [@media(max-height:600px)]:translate-x-[-100px]
             [@media(max-height:600px)]:translate-y-[50px]
+            [@media(min-width:1024px)_and_(max-width:1279px)]:w-[101px]
+            [@media(min-width:1024px)_and_(max-width:1279px)]:translate-x-[-90px]
 
     sm:top-[37%]
     sm:w-[16vw]
@@ -238,9 +246,11 @@ const Banner = () => {
 
     min-[400px]:top-[50%]
     min-[400px]:w-[72%]
-       [@media(max-height:600px)]:top-[55%]     
+       [@media(max-height:600px)]:top-[53%]     
        [@media(max-height:600px)]:w-[60%]     
-       [@media(max-height:600px)]:translate-x-[-300px]     
+       [@media(max-height:600px)]:translate-x-[-310px]     
+       [@media(min-width:1024px)_and_(max-width:1279px)]:translate-x-[-342px]
+       [@media(min-width:1024px)_and_(max-width:1279px)]:top-[270px]
     sm:top-[44%]
     sm:w-[66%]
 
@@ -284,6 +294,7 @@ const Banner = () => {
 
               min-[400px]:left-[21%]
               min-[400px]:text-[8px]
+                [@media(min-width:1024px)_and_(max-width:1279px)]:top-[33%]
 
               sm:left-[23%]
               sm:text-sm
@@ -424,11 +435,13 @@ const Banner = () => {
     min-[400px]:left-[20%]
     min-[400px]:top-[54%]
     min-[400px]:w-[11%]
-
+  [@media(max-height:600px)]:left-[16%]
+  [@media(max-height:600px)]:top-[60%]
     sm:left-[22%]
     sm:top-[55%]
     sm:w-[9%]
-
+[@media(min-width:1024px)_and_(max-width:1279px)]:left-[20%]
+[@media(min-width:1024px)_and_(max-width:1279px)]:top-[50%]
     md:left-[20%]
     md:top-[54%]
     md:w-[9%]
@@ -475,7 +488,9 @@ const Banner = () => {
     sm:left-[33%]
     sm:top-[4%]
     sm:w-[1%]
-
+    [@media(max-height:600px)]:top-[350px]
+    [@media(max-height:600px)]:left-[28%]
+    [@media(min-width:1024px)_and_(max-width:1279px)]:left-[30%]
     md:left-[29%]
     md:top-[45%]
     md:w-[8%]
@@ -519,7 +534,9 @@ const Banner = () => {
     sm:right-[33%]
     sm:top-[38%]
     sm:w-[9%]
-
+  [@media(max-height:600px)]:left-[58%]
+  [@media(max-height:600px)]:top-[48%]
+  [@media(min-width:1024px)_and_(max-width:1279px)]:left-[54%]
     md:right-[33%]
     md:top-[45%]
     md:w-[9%]
@@ -567,6 +584,9 @@ const Banner = () => {
     sm:right-[25%]
     sm:top-[48%]
     sm:w-[9%]
+  [@media(max-height:600px)]:left-[68%]
+  [@media(max-height:600px)]:top-[62%]
+    [@media(min-width:1024px)_and_(max-width:1279px)]:left-[65%]
 
     md:right-[22%]
     md:top-[55%]
