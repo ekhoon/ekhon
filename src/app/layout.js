@@ -67,6 +67,7 @@ export default function RootLayout({ children }) {
     name: "Ekhoon - এখন",
     alternateName: "Ekhoon - এখন",
     url: "https://ekhoon.com",
+     logo: "https://ekhoon.com/icon.svg",
   };
 
   return (
