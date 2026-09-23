@@ -61,8 +61,24 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Ekhoon - এখন",
+    alternateName: "Ekhoon - এখন",
+    url: "https://ekhoon.com",
+  };
+
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         <Navbar />
         {children}
