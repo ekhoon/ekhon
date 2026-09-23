@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const Banner = () => {
   return (
-    <section className="w-full overflow-hidden px-2 sm:px-6 lg:px-8">
+   <section className="w-full overflow-hidden px-2 sm:px-6 lg:px-8 md:bg-transparent lg:bg-transparent [@media(max-height:600px)]:bg-transparent  ">
       <div
         className="
           relative
@@ -16,6 +16,7 @@ const Banner = () => {
           overflow-hidden
           rounded-[20px]
           sm:rounded-[32px]
+          [@media(max-height:600px)]:min-h-screen
         "
       >
         {/* =========================================================
@@ -30,11 +31,14 @@ const Banner = () => {
           className="
          
             block
+           
             h-auto
             w-full
             -mt-2
             sm:mt-2
-            
+            [@media(max-height:600px)]:w-[100%]
+            [@media(max-height:600px)]:translate-y-[180px]
+            [@media(max-height:600px)]:translate-x-[-60px]
             sm:translate-x-[-20px]
             
            
@@ -90,7 +94,7 @@ const Banner = () => {
       text-black
 
       min-[400px]:text-[22px]
-
+            [@media(max-height:600px)]:text-[52px]
       sm:text-4xl
       md:text-5xl
       lg:text-6xl
@@ -192,6 +196,10 @@ const Banner = () => {
     min-[400px]:min-w-[45px]
     min-[400px]:translate-x-[-20px]
 
+            [@media(max-height:600px)]:w-[120px]
+            [@media(max-height:600px)]:translate-x-[-100px]
+            [@media(max-height:600px)]:translate-y-[50px]
+
     sm:top-[37%]
     sm:w-[16vw]
     sm:min-w-[55px]
@@ -230,7 +238,8 @@ const Banner = () => {
 
     min-[400px]:top-[50%]
     min-[400px]:w-[72%]
-
+       [@media(max-height:600px)]:top-[60%]     
+       [@media(max-height:600px)]:translate-x-[-350px]     
     sm:top-[44%]
     sm:w-[66%]
 

@@ -60,12 +60,14 @@ const Footer = () => {
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
-                max-w-[280px]
+                max-w-full
+                
+                text-center
                 text-[12px]
                 font-medium
                 leading-[1.45]
                 text-[#073e6c]
-
+                
                 sm:text-[13px]
               "
             >
@@ -87,7 +89,7 @@ const Footer = () => {
             open={openSection === "company"}
             onClick={() => toggleSection("company")}
           >
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 pb-5 pt-1">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-4 pb-5 pt-1">
               <FooterLink>About Us</FooterLink>
               <FooterLink>How It Works</FooterLink>
 
@@ -121,7 +123,7 @@ const Footer = () => {
             open={openSection === "providers"}
             onClick={() => toggleSection("providers")}
           >
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 pb-5 pt-1">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-4 pb-5 pt-1">
               <FooterLink>Become a Provider</FooterLink>
               <FooterLink>How It Works</FooterLink>
 
@@ -133,7 +135,7 @@ const Footer = () => {
               GET THE APP
           ====================================================== */}
 
-          <div className="border-b border-gray-300 py-5">
+          <div className="border-b flex flex-col items-center border-gray-300 py-5">
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="

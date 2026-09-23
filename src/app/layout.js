@@ -8,6 +8,10 @@ export const metadata = {
   title: {
     default: "Ekhoon | Trusted Home Services in Bangladesh",
     template: "%s | Ekhoon",
+  },icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
 
   description:
