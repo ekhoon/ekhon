@@ -18,10 +18,8 @@ const Service = () => {
           sm:py-20 
  
           md:px-10 
-          md:py-24 
  
           lg:px-16 
-          lg:py-28 
  
           xl:px-12 
         " 

@@ -1,15 +1,16 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   {
     name: "About ",
-    href: "#about",
+    href: "/",
   },
   {
     name: "How It Works",
-    href: "how-it-works",
+    href: "/how-it-works",
   },
   {
     name: "Services",
@@ -22,10 +23,21 @@ const navItems = [
 ];
 
 const Navbar = () => {
+ const pathname = usePathname();
   const [activeItem, setActiveItem] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const currentItem = navItems.find(
+      (item) => item.href === pathname
+    );
+
+    setActiveItem(currentItem?.name || null);
+  }, [pathname]);
+
+
  useEffect(() => {
   let lastScrollY = window.scrollY;
   let scrollUpDistance = 0;
@@ -169,7 +181,8 @@ const Navbar = () => {
               "
             >
               {navItems.map((item) => {
-                const isActive = activeItem === item.name;
+             const isActive =
+  activeItem === item.name || pathname === item.href;
 
                 return (
                   <a
@@ -471,7 +484,7 @@ const Navbar = () => {
         >
           <div className="space-y-1.5">
             {navItems.map((item) => {
-              const isActive = activeItem === item.name;
+              const isActive = activeItem === item.name || pathname === item.href;
 
               return (
                 <a

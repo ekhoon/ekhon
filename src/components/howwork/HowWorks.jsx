@@ -9,19 +9,15 @@ const HowWorks = () => {
       <div
         className="
           mx-auto
-          w-full
-          max-w-[1200px]
-          px-5
-          py-1
+        
+
 
           sm:px-8
           sm:py-1
 
           md:px-10
-          md:py-1
 
           lg:px-16
-          lg:py-1
 
           xl:px-12
         "
@@ -31,14 +27,13 @@ const HowWorks = () => {
             grid
             grid-cols-1
             items-center
-            gap-10
+
 
             sm:gap-12
 
             md:gap-10
 
             lg:grid-cols-2
-            lg:gap-6
 
             xl:gap-10
           "
@@ -48,7 +43,7 @@ const HowWorks = () => {
             className="
               z-10
               w-full
-              max-w-full
+    
 
               lg:pr-2
 
@@ -59,7 +54,6 @@ const HowWorks = () => {
             <div
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
-                mb-4
                 inline-flex
                 items-center
                 rounded-full
@@ -179,18 +173,13 @@ const HowWorks = () => {
 
       lg:w-[680px]
       
-      lg:h-[600px]
       lg:max-w-none
       lg:object-contain
-      lg:translate-x-[50px]
-      lg:translate-y-[90px]
 
-      xl:w-[680px]
-      xl:h-[650px]
+
       xl:max-w-none
       xl:object-contain
-      xl:translate-x-[70px]
-      xl:translate-y-[155px]
+
     "
   />
 </div>
