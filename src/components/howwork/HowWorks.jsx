@@ -5,28 +5,27 @@ import Image from "next/image";
 
 const HowWorks = () => {
   return (
-    <section className="w-full overflow-hidden bg-white">
+    <section className="w-full overflow-hidden bg-slate-100">
       <div
         className="
           mx-auto
           w-full
-          max-w-[1100px]
+          max-w-[1200px]
           px-5
-          py-12
+          py-1
 
           sm:px-8
-          sm:py-16
+          sm:py-1
 
           md:px-10
-          md:py-16
+          md:py-1
 
           lg:px-16
-          lg:py-20
+          lg:py-1
+
+          xl:px-12
         "
       >
-        {/* =========================
-            SECTION 1
-        ========================== */}
         <div
           className="
             grid
@@ -39,21 +38,21 @@ const HowWorks = () => {
             md:gap-10
 
             lg:grid-cols-2
-            lg:gap-8
+            lg:gap-6
 
-            xl:gap-12
+            xl:gap-10
           "
         >
-          {/* =========================
-              LEFT CONTENT
-          ========================== */}
+          {/* LEFT CONTENT */}
           <div
             className="
               z-10
               w-full
-              max-w-[600px]
+              max-w-full
 
-              lg:pr-4
+              lg:pr-2
+
+              xl:pr-0
             "
           >
             {/* Badge */}
@@ -68,7 +67,7 @@ const HowWorks = () => {
                 px-4
                 py-1.5
                 text-[11px]
-                font-semibold
+                font-bold
                 text-[#1685e8]
 
                 sm:mb-5
@@ -80,7 +79,7 @@ const HowWorks = () => {
 
             {/* Heading */}
             <h2
-              style={{ fontFamily: "Amplesoft, sans-serif" }}
+              style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 text-[38px]
                 font-semibold
@@ -88,27 +87,29 @@ const HowWorks = () => {
                 tracking-tight
                 text-[#092e5c]
 
-                min-[400px]:text-[42px]
+                min-[400px]:text-[35px]
 
                 sm:text-[48px]
 
                 md:text-[52px]
 
-                lg:text-[46px]
-
-                xl:text-[56px]
+                lg:text-5xl
+                xl:text-5xl
+                whitespace-nowrap
               "
             >
-              Find a service.
+              Find the right technician
               <br />
 
               <span className="text-[#1685e8]">
-                Request a technician.
+                for your
               </span>
 
               <br />
 
-              Get the job done.
+              <span className="whitespace-nowrap">
+                home service needs
+              </span>
             </h2>
 
             {/* Description */}
@@ -127,59 +128,72 @@ const HowWorks = () => {
 
                 md:text-base
 
-                lg:max-w-[520px]
+            
+
+               
               "
             >
-              Ekhoon helps you find trusted and nearby service professionals
-              for all your home service needs. From small repairs to regular
-              maintenance, we make it simple and quick.
+              Need a technician for a home repair or maintenance job?
+              Ekhoon helps you find nearby service professionals for
+              different types of home services. Send a request, connect
+              with an available technician, and get your service done
+              at your convenience.
             </p>
           </div>
 
-          {/* =========================
-              RIGHT IMAGE
-          ========================== */}
+          {/* RIGHT IMAGE */}
           <div
-            className="
-              relative
-              flex
-              w-full
-              items-center
-              justify-center
+  className="
+    relative
+    flex
+    w-full
+    items-center
+    justify-center
+    overflow-visible
 
-              min-h-[320px]
+    min-h-[300px]
 
-              sm:min-h-[400px]
+    sm:min-h-[380px]
 
-              md:min-h-[460px]
+    md:min-h-[430px]
 
-              lg:min-h-[480px]
+    lg:min-h-[500px]
 
-              xl:min-h-[540px]
-            "
-          >
-            <Image
-              src="/Photoroom1.png"
-              alt="How Ekhoon works"
-              width={1000}
-              height={700}
-              priority
-              className="
-                h-auto
-                w-full
-                max-w-[520px]
-                object-contain
+    xl:min-h-[560px]
+  "
+>
+  <Image
+    src="/Photoroom1.png"
+    alt="How Ekhoon works"
+    width={1000}
+    height={700}
+    priority
+    className="
+      w-full
+      max-w-[520px]
+      object-contain
 
-                sm:max-w-[580px]
+      sm:max-w-[580px]
 
-                md:max-w-[620px]
+      md:max-w-[620px]
 
-                lg:max-w-[560px]
+      lg:w-[680px]
+      
+      lg:h-[600px]
+      lg:max-w-none
+      lg:object-contain
+      lg:translate-x-[50px]
+      lg:translate-y-[90px]
 
-                xl:max-w-[650px]
-              "
-            />
-          </div>
+      xl:w-[680px]
+      xl:h-[650px]
+      xl:max-w-none
+      xl:object-contain
+      xl:translate-x-[70px]
+      xl:translate-y-[155px]
+    "
+  />
+</div>
         </div>
       </div>
     </section>
