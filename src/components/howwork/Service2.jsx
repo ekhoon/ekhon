@@ -12,16 +12,14 @@ const Service2 = () => {
           w-full
           max-w-[1200px]
           px-5
-          py-16
+
 
           sm:px-8
           sm:py-20
 
           md:px-10
-          md:py-24
 
           lg:px-16
-          lg:py-28
 
           xl:px-12
         "

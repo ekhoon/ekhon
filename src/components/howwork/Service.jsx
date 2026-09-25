@@ -15,7 +15,7 @@ const Service = () => {
           py-16 
  
           sm:px-8 
-          sm:py-20 
+          sm:py-10
  
           md:px-10 
  
@@ -245,7 +245,7 @@ const Service = () => {
  
                   md:max-w-[320px] 
  
-                  lg:max-w-[300px] 
+                  lg:max-w-[260px] 
                 " 
               /> 
             </div> 

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Section3 = () => {
+const Section5 = () => {
   return (
     <section className="w-full overflow-hidden bg-white">
       <div
@@ -13,23 +13,19 @@ const Section3 = () => {
           max-w-[1200px]
           px-5
 
-
           sm:px-8
 
 
           md:px-10
 
-
           lg:px-16
-   
 
           xl:px-12
         "
       >
         {/* =========================
-            STEP 03
+            STEP 05
         ========================== */}
-
         <div
           className="
             grid
@@ -50,7 +46,6 @@ const Section3 = () => {
           {/* =========================
               LEFT IMAGE
           ========================== */}
-
           <div
             className="
               flex
@@ -78,10 +73,9 @@ const Section3 = () => {
             >
               <Image
                 src="/ekhon app2.png"
-                alt="Send a service request"
+                alt="Get your service done"
                 width={620}
                 height={700}
-                priority
                 className="
                   h-auto
                   w-full
@@ -101,7 +95,6 @@ const Section3 = () => {
           {/* =========================
               RIGHT CONTENT
           ========================== */}
-
           <div
             className="
               w-full
@@ -115,7 +108,6 @@ const Section3 = () => {
             {/* =========================
                 NUMBER
             ========================== */}
-
             <div
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -136,13 +128,12 @@ const Section3 = () => {
                 sm:text-lg
               "
             >
-              03
+              05
             </div>
 
             {/* =========================
                 TITLE
             ========================== */}
-
             <h2
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -160,13 +151,12 @@ const Section3 = () => {
                 xl:text-[32px]
               "
             >
-              Send a Service Request
+              Get Your Service Done
             </h2>
 
             {/* =========================
                 SUBTITLE
             ========================== */}
-
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -178,13 +168,12 @@ const Section3 = () => {
                 sm:text-base
               "
             >
-              Request the service you need.
+              The technician comes to your location.
             </p>
 
             {/* =========================
                 DESCRIPTION
             ========================== */}
-
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -199,18 +188,17 @@ const Section3 = () => {
                 md:text-[15px]
               "
             >
-              Once you find the right service, send a request through the Ekhoon
-              app. Your request is sent to available technicians who can respond
-              to your service need. You don't need to spend hours calling
-              different people to find someone available.
+              After your request is accepted, the technician comes to your
+              location and provides the requested service. From home repairs
+              and electrical work to plumbing, AC servicing, appliance
+              repair, painting and more — Ekhoon is designed to make finding
+              everyday service professionals easier.
             </p>
 
             {/* =========================
-                SERVICE ICON
+                ICON
             ========================== */}
-
             <div
-              style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 inline-flex
                 items-center
@@ -226,18 +214,16 @@ const Section3 = () => {
                   items-center
                   justify-center
                   rounded-full
-                  text-lg
 
                   sm:h-10
                   sm:w-10
                 "
               >
                 <Image
-                  className="rotate-[180deg]"
                   src="/icon-pin.png"
                   width={30}
                   height={30}
-                  alt="location"
+                  alt="Service completed"
                 />
               </div>
             </div>
@@ -248,4 +234,4 @@ const Section3 = () => {
   );
 };
 
-export default Section3;
+export default Section5;

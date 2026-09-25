@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Section3 = () => {
+const Section4 = () => {
   return (
     <section className="w-full overflow-hidden bg-white">
       <div
@@ -27,9 +27,8 @@ const Section3 = () => {
         "
       >
         {/* =========================
-            STEP 03
+            STEP 04
         ========================== */}
-
         <div
           className="
             grid
@@ -48,74 +47,23 @@ const Section3 = () => {
           "
         >
           {/* =========================
-              LEFT IMAGE
+              LEFT CONTENT
           ========================== */}
-
           <div
             className="
-              flex
-              w-full
-              items-center
-              justify-center
-
-              lg:justify-start
-            "
-          >
-            <div
-              className="
-                relative
-                flex
-                w-full
-                items-center
-                justify-center
-
-                min-h-[260px]
-
-                sm:min-h-[320px]
-
-                md:min-h-[360px]
-              "
-            >
-              <Image
-                src="/ekhon app2.png"
-                alt="Send a service request"
-                width={620}
-                height={700}
-                priority
-                className="
-                  h-auto
-                  w-full
-                  max-w-[380px]
-                  object-contain
-
-                  sm:max-w-[420px]
-
-                  md:max-w-[320px]
-
-                  lg:max-w-[300px]
-                "
-              />
-            </div>
-          </div>
-
-          {/* =========================
-              RIGHT CONTENT
-          ========================== */}
-
-          <div
-            className="
+              order-2
               w-full
               max-w-[520px]
 
-              lg:pl-8
+              lg:order-1
+              lg:pr-8
 
-              xl:pl-10
+              xl:pr-10
             "
           >
             {/* =========================
                 NUMBER
             ========================== */}
-
             <div
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -136,13 +84,12 @@ const Section3 = () => {
                 sm:text-lg
               "
             >
-              03
+              04
             </div>
 
             {/* =========================
                 TITLE
             ========================== */}
-
             <h2
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -160,13 +107,12 @@ const Section3 = () => {
                 xl:text-[32px]
               "
             >
-              Send a Service Request
+              Technician Accepts Your Request
             </h2>
 
             {/* =========================
                 SUBTITLE
             ========================== */}
-
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -178,13 +124,12 @@ const Section3 = () => {
                 sm:text-base
               "
             >
-              Request the service you need.
+              Get connected with an available technician.
             </p>
 
             {/* =========================
                 DESCRIPTION
             ========================== */}
-
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
@@ -199,18 +144,15 @@ const Section3 = () => {
                 md:text-[15px]
               "
             >
-              Once you find the right service, send a request through the Ekhoon
-              app. Your request is sent to available technicians who can respond
-              to your service need. You don't need to spend hours calling
-              different people to find someone available.
+              A nearby technician can receive your request and accept the
+              job. Once accepted, you’ll be notified and can see the
+              connection in the app.
             </p>
 
             {/* =========================
-                SERVICE ICON
+                ICON
             ========================== */}
-
             <div
-              style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 inline-flex
                 items-center
@@ -226,20 +168,69 @@ const Section3 = () => {
                   items-center
                   justify-center
                   rounded-full
-                  text-lg
 
                   sm:h-10
                   sm:w-10
                 "
               >
                 <Image
-                  className="rotate-[180deg]"
                   src="/icon-pin.png"
                   width={30}
                   height={30}
-                  alt="location"
+                  alt="Request accepted"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* =========================
+              RIGHT IMAGE
+          ========================== */}
+          <div
+            className="
+              order-1
+              flex
+              w-full
+              items-center
+              justify-center
+
+              lg:order-2
+              lg:justify-end
+            "
+          >
+            <div
+              className="
+                relative
+                flex
+                w-full
+                items-center
+                justify-center
+
+                min-h-[260px]
+
+                sm:min-h-[320px]
+
+                md:min-h-[360px]
+              "
+            >
+              <Image
+                src="/ekhon app2.png"
+                alt="Technician accepts your request"
+                width={620}
+                height={700}
+                className="
+                  h-auto
+                  w-full
+                  max-w-[380px]
+                  object-contain
+
+                  sm:max-w-[420px]
+
+                  md:max-w-[320px]
+
+                  lg:max-w-[300px]
+                "
+              />
             </div>
           </div>
         </div>
@@ -248,4 +239,4 @@ const Section3 = () => {
   );
 };
 
-export default Section3;
+export default Section4;
