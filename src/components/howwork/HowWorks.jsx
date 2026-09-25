@@ -13,7 +13,7 @@ const HowWorks = () => {
 
 
           sm:px-8
-          sm:py-1
+
 
           md:px-10
 
@@ -35,7 +35,7 @@ const HowWorks = () => {
 
             lg:grid-cols-2
 
-            xl:gap-10
+      
           "
         >
           {/* LEFT CONTENT */}
@@ -59,7 +59,7 @@ const HowWorks = () => {
                 rounded-full
                 bg-[#e8f4ff]
                 px-4
-                py-1.5
+               
                 text-[11px]
                 font-bold
                 text-[#1685e8]
@@ -110,7 +110,7 @@ const HowWorks = () => {
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
-                mt-5
+  
                 max-w-[560px]
                 text-[13px]
                 leading-6
@@ -145,15 +145,6 @@ const HowWorks = () => {
     justify-center
     overflow-visible
 
-    min-h-[300px]
-
-    sm:min-h-[380px]
-
-    md:min-h-[430px]
-
-    lg:min-h-[500px]
-
-    xl:min-h-[560px]
   "
 >
   <Image
