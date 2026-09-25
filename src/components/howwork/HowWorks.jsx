@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HowWorks = () => {
   return (
-    <section className="w-full overflow-hidden bg-slate-100">
+    <section className="w-full overflow-hidden ">
       <div
         className="
           mx-auto
