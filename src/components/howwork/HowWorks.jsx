@@ -9,7 +9,7 @@ const HowWorks = () => {
       <div
         className="
           mx-auto
-        
+          max-w-[1200px]
 
 
           sm:px-8
