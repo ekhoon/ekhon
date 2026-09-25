@@ -9,7 +9,7 @@ const HowWorks = () => {
       <div
         className="
           mx-auto
-          max-w-[1200px]
+          max-w-[1400px]
 
 
           sm:px-8
@@ -50,26 +50,7 @@ const HowWorks = () => {
               xl:pr-0
             "
           >
-            {/* Badge */}
-            <div
-              style={{ fontFamily: "Inter, sans-serif" }}
-              className="
-                inline-flex
-                items-center
-                rounded-full
-                bg-[#e8f4ff]
-                px-4
-               
-                text-[11px]
-                font-bold
-                text-[#1685e8]
-
-                sm:mb-5
-                sm:text-xs
-              "
-            >
-              How Ekhoon Works
-            </div>
+          
 
             {/* Heading */}
             <h2
@@ -79,7 +60,7 @@ const HowWorks = () => {
                 font-semibold
                 leading-[1.05]
                 tracking-tight
-                text-[#092e5c]
+                text-[#073E6C]
 
                 min-[400px]:text-[35px]
 
@@ -92,11 +73,11 @@ const HowWorks = () => {
                 whitespace-nowrap
               "
             >
-              Find the right technician
+              Find the right 
               <br />
 
-              <span className="text-[#1685e8]">
-                for your
+              <span className="text-[#63B9D5]">
+               technician for your
               </span>
 
               <br />

@@ -35,7 +35,7 @@ const Service = () => {
               font-bold 
               uppercase 
               tracking-[0.12em] 
-              text-[#1685e8] 
+              text-[#63B9D5] 
  
               sm:text-xs 
             " 
@@ -136,7 +136,7 @@ const Service = () => {
                 mt-2 
                 text-sm 
                 font-semibold 
-                text-[#1685e8] 
+                text-[#63B9D5] 
  
                 sm:text-base 
               " 
