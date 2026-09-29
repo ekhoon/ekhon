@@ -256,8 +256,8 @@ const Banner = () => {
     sm:w-[66%]
 
     md:top-[7%]
-    md:w-[60%]
-
+    md:w-[61%]
+  
 
     lg:top-[50%]
     lg:w-[55%]
