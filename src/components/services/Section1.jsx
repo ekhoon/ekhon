@@ -254,7 +254,7 @@ const Section1 = () => {
             "
           >
             <Image
-              src="/images/banner-image.png"
+              src="/service_banner.png"
               alt="Home service"
               fill
               priority
