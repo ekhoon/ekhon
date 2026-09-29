@@ -217,7 +217,8 @@ const Banner = () => {
     md:translate-x-[-70px]
 
     lg:top-[37%]
-    lg:w-[18vw]
+    lg:left-[49%]
+    lg:w-[28vw]
     lg:max-w-[150px]
 
     xl:top-[37%]
@@ -254,12 +255,13 @@ const Banner = () => {
     sm:top-[44%]
     sm:w-[66%]
 
-    md:top-[47%]
+    md:top-[7%]
     md:w-[60%]
 
 
-    lg:top-[46%]
-    lg:w-[65%]
+    lg:top-[50%]
+    lg:w-[55%]
+    lg:translate-y-[30px]
 
     xl:top-[46%]
     xl:w-[65%]
