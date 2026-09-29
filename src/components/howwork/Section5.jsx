@@ -10,32 +10,41 @@ const Section5 = () => {
         className="
           mx-auto
           w-full
-          max-w-[1200px]
-          px-5
+          max-w-[1540px]
 
-          sm:px-8
+          px-3
+          py-10
 
+          min-[400px]:px-4
+          min-[400px]:py-12
 
-          md:px-10
+          sm:px-6
+          sm:py-14
 
-          lg:px-16
+          md:px-12
+          md:py-16
 
-          xl:px-12
+          lg:px-20
+          lg:py-16
         "
       >
         {/* =========================
             STEP 05
         ========================== */}
+
         <div
           className="
             grid
             grid-cols-1
             items-center
+
             gap-8
 
-            sm:gap-10
+            min-[400px]:gap-10
 
-            md:gap-12
+            sm:gap-12
+
+            md:gap-14
 
             lg:grid-cols-2
             lg:gap-8
@@ -46,6 +55,7 @@ const Section5 = () => {
           {/* =========================
               LEFT IMAGE
           ========================== */}
+
           <div
             className="
               flex
@@ -64,11 +74,17 @@ const Section5 = () => {
                 items-center
                 justify-center
 
-                min-h-[260px]
+                max-w-[300px]
 
-                sm:min-h-[320px]
+                min-[400px]:max-w-[320px]
 
-                md:min-h-[360px]
+                sm:max-w-[340px]
+
+                md:max-w-[350px]
+
+                lg:max-w-[360px]
+
+                xl:max-w-[380px]
               "
             >
               <Image
@@ -79,14 +95,7 @@ const Section5 = () => {
                 className="
                   h-auto
                   w-full
-                  max-w-[380px]
                   object-contain
-
-                  sm:max-w-[420px]
-
-                  md:max-w-[320px]
-
-                  lg:max-w-[300px]
                 "
               />
             </div>
@@ -95,33 +104,35 @@ const Section5 = () => {
           {/* =========================
               RIGHT CONTENT
           ========================== */}
+
           <div
             className="
               w-full
-              max-w-[520px]
+              max-w-[560px]
 
               lg:pl-8
 
               xl:pl-10
             "
           >
-            {/* =========================
-                NUMBER
-            ========================== */}
+            {/* NUMBER */}
             <div
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 mb-4
                 flex
-                h-12
-                w-12
+                h-10
+                w-10
                 items-center
                 justify-center
                 rounded-full
                 bg-[#e8f4ff]
-                text-base
+                text-sm
                 font-bold
                 text-[#1685e8]
+
+                min-[400px]:h-11
+                min-[400px]:w-11
 
                 sm:h-14
                 sm:w-14
@@ -131,16 +142,16 @@ const Section5 = () => {
               05
             </div>
 
-            {/* =========================
-                TITLE
-            ========================== */}
+            {/* TITLE */}
             <h2
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
-                text-2xl
+                text-[22px]
                 font-bold
                 leading-tight
                 text-[#092e5c]
+
+                min-[400px]:text-2xl
 
                 sm:text-3xl
 
@@ -154,16 +165,16 @@ const Section5 = () => {
               Get Your Service Done
             </h2>
 
-            {/* =========================
-                SUBTITLE
-            ========================== */}
+            {/* SUBTITLE */}
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 mt-2
-                text-sm
+                text-[13px]
                 font-semibold
                 text-[#63B9D5]
+
+                min-[400px]:text-sm
 
                 sm:text-base
               "
@@ -171,16 +182,16 @@ const Section5 = () => {
               The technician comes to your location.
             </p>
 
-            {/* =========================
-                DESCRIPTION
-            ========================== */}
+            {/* DESCRIPTION */}
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 mt-3
-                text-[13px]
+                text-[12px]
                 leading-6
                 text-[#6883a1]
+
+                min-[400px]:text-[13px]
 
                 sm:text-sm
                 sm:leading-7
@@ -190,16 +201,15 @@ const Section5 = () => {
             >
               After your request is accepted, the technician comes to your
               location and provides the requested service. From home repairs
-              and electrical work to plumbing, AC servicing, appliance
-              repair, painting and more — Ekhoon is designed to make finding
-              everyday service professionals easier.
+              and electrical work to plumbing, AC servicing, appliance repair,
+              painting and more — Ekhoon is designed to make finding everyday
+              service professionals easier.
             </p>
 
-            {/* =========================
-                ICON
-            ========================== */}
+            {/* ICON */}
             <div
               className="
+                mt-2
                 inline-flex
                 items-center
                 rounded-full

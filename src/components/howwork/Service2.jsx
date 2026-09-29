@@ -10,18 +10,22 @@ const Service2 = () => {
         className="
           mx-auto
           w-full
-          max-w-[1200px]
-          px-5
+          max-w-[1540px]
 
+          px-3
+          py-10
 
-          sm:px-8
-          sm:py-20
+          min-[400px]:px-4
+          min-[400px]:py-12
 
-          md:px-10
+          sm:px-6
+          sm:py-14
 
-          lg:px-16
+          md:px-12
+          md:py-16
 
-          xl:px-12
+          lg:px-20
+          lg:py-16
         "
       >
         {/* =========================
@@ -32,11 +36,14 @@ const Service2 = () => {
             grid
             grid-cols-1
             items-center
+
             gap-8
 
-            sm:gap-10
+            min-[400px]:gap-10
 
-            md:gap-12
+            sm:gap-12
+
+            md:gap-14
 
             lg:grid-cols-2
             lg:gap-8
@@ -50,7 +57,7 @@ const Service2 = () => {
           <div
             className="
               w-full
-              max-w-[520px]
+              max-w-[560px]
 
               lg:order-1
               lg:pl-8
@@ -58,23 +65,24 @@ const Service2 = () => {
               xl:pl-10
             "
           >
-            {/* =========================
-                NUMBER
-            ========================== */}
+            {/* NUMBER */}
             <div
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 mb-4
                 flex
-                h-12
-                w-12
+                h-10
+                w-10
                 items-center
                 justify-center
                 rounded-full
                 bg-[#e8f4ff]
-                text-base
+                text-sm
                 font-bold
                 text-[#1685e8]
+
+                min-[400px]:h-11
+                min-[400px]:w-11
 
                 sm:h-14
                 sm:w-14
@@ -84,16 +92,16 @@ const Service2 = () => {
               02
             </div>
 
-            {/* =========================
-                TITLE
-            ========================== */}
+            {/* TITLE */}
             <h2
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
-                text-2xl
+                text-[22px]
                 font-bold
                 leading-tight
                 text-[#092e5c]
+
+                min-[400px]:text-2xl
 
                 sm:text-3xl
 
@@ -107,16 +115,16 @@ const Service2 = () => {
               Find Nearby Technicians
             </h2>
 
-            {/* =========================
-                SUBTITLE
-            ========================== */}
+            {/* SUBTITLE */}
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 mt-2
-                text-sm
+                text-[13px]
                 font-semibold
                 text-[#63B9D5]
+
+                min-[400px]:text-sm
 
                 sm:text-base
               "
@@ -124,16 +132,16 @@ const Service2 = () => {
               Find service professionals near you
             </p>
 
-            {/* =========================
-                DESCRIPTION
-            ========================== */}
+            {/* DESCRIPTION */}
             <p
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
                 mt-3
-                text-[13px]
+                text-[12px]
                 leading-6
                 text-[#6883a1]
+
+                min-[400px]:text-[13px]
 
                 sm:text-sm
                 sm:leading-7
@@ -141,19 +149,18 @@ const Service2 = () => {
                 md:text-[15px]
               "
             >
-              Ekhoon uses your location to help you discover nearby technicians
-              and service providers. You can see available professionals around
-              your area and choose the service you need without depending only
-              on recommendations from friends, Facebook groups, or local
-              contacts.
+              Ekhoon uses your location to help you discover nearby
+              technicians and service providers. You can see available
+              professionals around your area and choose the service you need
+              without depending only on recommendations from friends,
+              Facebook groups, or local contacts.
             </p>
 
-            {/* =========================
-                LOCATION ICON
-            ========================== */}
+            {/* LOCATION ICON */}
             <div
               style={{ fontFamily: "Inter, sans-serif" }}
               className="
+                mt-2
                 inline-flex
                 items-center
                 rounded-full
@@ -207,11 +214,17 @@ const Service2 = () => {
                 items-center
                 justify-center
 
-                min-h-[260px]
+                max-w-[300px]
 
-                sm:min-h-[320px]
+                min-[400px]:max-w-[320px]
 
-                md:min-h-[360px]
+                sm:max-w-[340px]
+
+                md:max-w-[350px]
+
+                lg:max-w-[360px]
+
+                xl:max-w-[380px]
               "
             >
               <Image
@@ -223,14 +236,7 @@ const Service2 = () => {
                 className="
                   h-auto
                   w-full
-                  max-w-[380px]
                   object-contain
-
-                  sm:max-w-[420px]
-
-                  md:max-w-[320px]
-
-                  lg:max-w-[300px]
                 "
               />
             </div>
