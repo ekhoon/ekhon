@@ -11,6 +11,7 @@ import {
   FaTiktok,
   FaWhatsapp,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -94,7 +95,9 @@ const Footer = () => {
               <FooterLink>How It Works</FooterLink>
 
               <FooterLink>Our Services</FooterLink>
-              <FooterLink>Contact Us</FooterLink>
+              <FooterLink>
+                <Link href='/contact'>Contact Us</Link>
+              </FooterLink>
             </div>
           </FooterAccordion>
 
@@ -372,7 +375,8 @@ const Footer = () => {
       <FooterLink>About Us</FooterLink>
       <FooterLink>How It Works</FooterLink>
       <FooterLink>Our Services</FooterLink>
-      <FooterLink>Contact Us</FooterLink>
+      <FooterLink>                <Link href='/contact'>Contact Us</Link>
+</FooterLink>
     </div>
   </div>
 
