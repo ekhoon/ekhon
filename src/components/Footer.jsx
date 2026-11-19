@@ -113,7 +113,9 @@ const Footer = () => {
             <div className="grid grid-cols-1 gap-y-4 pb-5 pt-1">
               <FooterLink>Help Center</FooterLink>
               <FooterLink>FAQs</FooterLink>
-              <FooterLink>Contact Support</FooterLink>
+              <FooterLink>
+                <Link href='/contact'>Contact Support</Link>
+              </FooterLink>
             </div>
           </FooterAccordion>
 
@@ -128,7 +130,11 @@ const Footer = () => {
           >
             <div className="grid grid-cols-1 gap-x-8 gap-y-4 pb-5 pt-1">
               <FooterLink>Become a Provider</FooterLink>
-              <FooterLink>How It Works</FooterLink>
+              <FooterLink>
+                <Link href='/how-it-works' >
+                How It Works
+                </Link>
+              </FooterLink>
 
               <FooterLink>Provider Support</FooterLink>
             </div>
@@ -208,31 +214,45 @@ const Footer = () => {
             "
           >
             <MobileSocialIcon>
-              <FaFacebook size={13} />
+              <Link href="https://www.facebook.com/ekhoonbd/" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={13} />
+              </Link>
             </MobileSocialIcon>
 
             <MobileSocialIcon>
-              <FaInstagram size={13} />
+              <a href="https://www.instagram.com/ekhoonbd/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={13} />
+              </a>
             </MobileSocialIcon>
 
             <MobileSocialIcon>
-              <FaWhatsapp size={13} />
+              <a href="https://wa.me/8801712345678" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp size={13} />
+              </a>
             </MobileSocialIcon>
 
             <MobileSocialIcon>
-              <FaYoutube size={13} />
+              <a href="https://www.youtube.com/@ekhoonbd" target="_blank" rel="noopener noreferrer">
+                <FaYoutube size={13} />
+              </a>
             </MobileSocialIcon>
 
             <MobileSocialIcon>
-              <FaTiktok size={13} />
+              <a href="https://www.tiktok.com/@ekhoonbd" target="_blank" rel="noopener noreferrer">
+                <FaTiktok size={13} />
+              </a>
             </MobileSocialIcon>
 
             <MobileSocialIcon>
-              <FaLinkedin size={13} />
+              <a href="https://www.linkedin.com/company/ekhoonbd" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={13} />
+              </a>
             </MobileSocialIcon>
 
             <MobileSocialIcon>
-              <Mail size={13} strokeWidth={2.5} />
+              <a href="mailto:info@ekhoonbd.com" target="_blank" rel="noopener noreferrer">
+                <Mail size={13} strokeWidth={2.5} />
+              </a>
             </MobileSocialIcon>
           </div>
 
@@ -343,23 +363,33 @@ const Footer = () => {
 
     <div className="mt-6 flex items-center gap-2.5">
       <SocialIcon>
-        <FaFacebook size={13} />
+        <a href="https://www.facebook.com/ekhoonbd/" target="_blank" rel="noopener noreferrer">
+          <FaFacebook size={13} />
+        </a>
       </SocialIcon>
 
       <SocialIcon>
-        <FaInstagram size={13} />
+        <a href="https://www.instagram.com/ekhoonbd/" target="_blank" rel="noopener noreferrer">
+          <FaInstagram size={13} />
+        </a>
       </SocialIcon>
 
       <SocialIcon>
-        <FaYoutube size={13} />
+        <a href="https://www.youtube.com/@ekhoonbd" target="_blank" rel="noopener noreferrer">
+          <FaYoutube size={13} />
+        </a>
       </SocialIcon>
 
       <SocialIcon>
-        <FaLinkedin size={13} />
+        <a href="https://www.linkedin.com/company/ekhoonbd" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={13} />
+        </a>
       </SocialIcon>
 
       <SocialIcon>
-        <Mail size={13} strokeWidth={2.5} />
+        <a href="mailto:info@ekhoonbd.com" target="_blank" rel="noopener noreferrer">
+          <Mail size={13} strokeWidth={2.5} />
+        </a>
       </SocialIcon>
     </div>
   </div>
@@ -373,7 +403,11 @@ const Footer = () => {
 
     <div className="mt-5 space-y-2">
       <FooterLink>About Us</FooterLink>
-      <FooterLink>How It Works</FooterLink>
+      <FooterLink>
+        <Link href='/how-it-works' >
+          How It Works
+        </Link>
+      </FooterLink>
       <FooterLink>Our Services</FooterLink>
       <FooterLink>                <Link href='/contact'>Contact Us</Link>
 </FooterLink>
@@ -390,7 +424,9 @@ const Footer = () => {
     <div className="mt-5 space-y-2">
       <FooterLink>Help Center</FooterLink>
       <FooterLink>FAQs</FooterLink>
-      <FooterLink>Contact Support</FooterLink>
+      <FooterLink>
+        <Link href='/contact'>Contact Support</Link>
+      </FooterLink>
     </div>
   </div>
 
@@ -403,7 +439,11 @@ const Footer = () => {
 
     <div className="mt-5 space-y-2">
       <FooterLink>Become a Provider</FooterLink>
-      <FooterLink>How It Works</FooterLink>
+      <FooterLink>
+        <Link href='/how-it-works' >
+          How It Works
+        </Link>
+      </FooterLink>
       <FooterLink>Provider Support</FooterLink>
     </div>
   </div>
