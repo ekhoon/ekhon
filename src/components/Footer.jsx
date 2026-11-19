@@ -21,7 +21,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full  font-inter px-3 pb-3 sm:px-6 lg:px-8">
+    <footer id="footer" className="w-full  font-inter px-3 pb-3 sm:px-6 lg:px-8">
       <div
         className="
           relative
@@ -111,8 +111,12 @@ const Footer = () => {
             onClick={() => toggleSection("support")}
           >
             <div className="grid grid-cols-1 gap-y-4 pb-5 pt-1">
-              <FooterLink>Help Center</FooterLink>
-              <FooterLink>FAQs</FooterLink>
+              <FooterLink>
+                <Link href='/contact'>Help Center</Link>
+              </FooterLink>
+              <FooterLink>
+                <Link href='/how-it-works'>FAQs</Link>
+              </FooterLink>
               <FooterLink>
                 <Link href='/contact'>Contact Support</Link>
               </FooterLink>
@@ -423,7 +427,9 @@ const Footer = () => {
 
     <div className="mt-5 space-y-2">
       <FooterLink>Help Center</FooterLink>
-      <FooterLink>FAQs</FooterLink>
+      <FooterLink>
+        <Link href='/how-it-works'>FAQs</Link>
+      </FooterLink>
       <FooterLink>
         <Link href='/contact'>Contact Support</Link>
       </FooterLink>

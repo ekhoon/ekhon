@@ -18,7 +18,7 @@ const navItems = [
   },
   {
     name: "For Providers",
-    href: "#providers",
+    href: "/providers",
   },
 ];
 
@@ -242,6 +242,11 @@ const Navbar = () => {
 
             {/* Download Button */}
             <button
+            onClick={() => {
+    document.getElementById("footer")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
               className="
                 hidden
                 cursor-pointer
@@ -544,6 +549,11 @@ const Navbar = () => {
 
           {/* Download Button */}
           <button
+          onClick={() => {
+    document.getElementById("footer")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
             className="
               mt-5
               w-full
