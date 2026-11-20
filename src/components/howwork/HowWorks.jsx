@@ -50,14 +50,7 @@ const HowWorks = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative z-10 w-full"
           >
-            {/* Badge */}
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#FE8C00]/20 bg-[#FE8C00]/10 px-4 py-2">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-[#FE8C00]" />
-
-              <span className="text-xs font-bold uppercase tracking-[2px] text-[#FE8C00] sm:text-sm">
-                How Ekhoon Works
-              </span>
-            </div>
+        
 
             {/* Heading */}
             <h1

@@ -37,14 +37,8 @@ const Section1 = () => {
           transition={{ duration: 0.7 }}
           className="relative z-10 flex w-full flex-col items-start lg:pr-4 xl:pr-8"
         >
-          {/* BADGE */}
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#63B9D5]/25 bg-white px-3 py-2 shadow-sm sm:px-4">
-            <span className="h-2 w-2 rounded-full bg-green-500" />
-            <span className="text-[10px] font-semibold text-[#073E6C] min-[400px]:text-xs">
-              Your Everyday Home Service Partner
-            </span>
-          </div>
-
+     
+        
           {/* HEADING */}
           <h1
             style={{ fontFamily: "Amplesoft, sans-serif" }}

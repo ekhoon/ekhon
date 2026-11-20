@@ -25,10 +25,7 @@ const ProviderBanner = () => {
           <div className="relative z-20 text-center lg:text-left">
 
             {/* BADGE */}
-            <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-[10px] font-bold tracking-wider text-[#073e6c] sm:text-xs">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-[#FE8C00]" />
-              EKHOON SERVICE PROVIDER
-            </span>
+           
 
             {/* HEADING */}
             <h1
