@@ -1,204 +1,157 @@
+
 "use client";
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
+import {
+  CheckCircle2,
+  MapPin,
+  Wrench,
+  ShieldCheck,
+} from "lucide-react";
 
 const Section5 = () => {
   return (
-    <section className="w-full overflow-hidden bg-white">
-      <div
-        className="
-          mx-auto
-          w-full
-          max-w-[1540px]
+    <section className="relative w-full overflow-hidden bg-white">
+      {/* BACKGROUND DECORATIONS */}
+      <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-[#FE8C00]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-[#63B9D5]/10 blur-3xl" />
 
-          px-3
-          py-10
+      <div className="relative mx-auto w-full max-w-[1540px] px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
 
-          min-[400px]:px-4
-          min-[400px]:py-12
+        {/* STEP 05 */}
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
 
-          sm:px-6
-          sm:py-14
-
-          md:px-12
-          md:py-16
-
-          lg:px-20
-          lg:py-16
-        "
-      >
-        {/* =========================
-            STEP 05
-        ========================== */}
-
-        <div
-          className="
-            grid
-            grid-cols-1
-            items-center
-
-            gap-8
-
-            min-[400px]:gap-10
-
-            sm:gap-12
-
-            md:gap-14
-
-            lg:grid-cols-2
-            lg:gap-8
-
-            xl:gap-12
-          "
-        >
-          {/* =========================
-              LEFT IMAGE
-          ========================== */}
-
-          <div
-            className="
-              flex
-              w-full
-              items-center
-              justify-center
-
-              lg:justify-start
-            "
+          {/* LEFT IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, x: -35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative flex w-full items-center justify-center lg:justify-start"
           >
-            <div
-              className="
-                relative
-                flex
-                w-full
-                items-center
-                justify-center
+            {/* IMAGE BACKGROUND */}
+            <div className="absolute h-[85%] w-[85%] rounded-[40px] bg-[#073E6C]/5 sm:rounded-[50px]" />
 
-                max-w-[300px]
+            {/* DECORATIVE CIRCLES */}
+            <div className="absolute left-[8%] top-[8%] h-14 w-14 rounded-full border-[9px] border-[#FE8C00]/15 sm:h-20 sm:w-20" />
 
-                min-[400px]:max-w-[320px]
+            <div className="absolute bottom-[8%] right-[8%] h-12 w-12 rounded-full bg-[#63B9D5]/15 sm:h-16 sm:w-16" />
 
-                sm:max-w-[340px]
-
-                md:max-w-[350px]
-
-                lg:max-w-[360px]
-
-                xl:max-w-[380px]
-              "
+            {/* MAIN IMAGE */}
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative z-10 w-full max-w-[260px] min-[400px]:max-w-[290px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[440px] xl:max-w-[490px]"
             >
               <Image
                 src="/ekhon app2.png"
-                alt="Get your service done"
+                alt="Ekhoon service completion"
                 width={620}
                 height={700}
-                className="
-                  h-auto
-                  w-full
-                  object-contain
-                "
+                className="h-auto w-full object-contain drop-shadow-[0_15px_25px_rgba(7,62,108,0.10)]"
               />
-            </div>
-          </div>
+            </motion.div>
 
-          {/* =========================
-              RIGHT CONTENT
-          ========================== */}
-
-          <div
-            className="
-              w-full
-              max-w-[560px]
-
-              lg:pl-8
-
-              xl:pl-10
-            "
-          >
-            {/* NUMBER */}
-            <div
-              style={{ fontFamily: "Inter, sans-serif" }}
-              className="
-                mb-4
-                flex
-                h-10
-                w-10
-                items-center
-                justify-center
-                rounded-full
-                bg-[#e8f4ff]
-                text-sm
-                font-bold
-                text-[#1685e8]
-
-                min-[400px]:h-11
-                min-[400px]:w-11
-
-                sm:h-14
-                sm:w-14
-                sm:text-lg
-              "
+            {/* FLOATING CARD 1 */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute left-0 top-[15%] z-20 flex items-center gap-2 rounded-xl border border-gray-100 bg-white p-3 shadow-[0_10px_30px_rgba(7,62,108,0.10)] sm:left-2 sm:gap-3 sm:p-4"
             >
-              05
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#FE8C00]/10 text-[#FE8C00] sm:h-11 sm:w-11">
+                <Wrench size={21} />
+              </div>
+
+              <div>
+                <p className="text-[11px] font-bold text-[#073E6C] sm:text-sm">
+                  Service Started
+                </p>
+
+                <p className="text-[9px] text-[#6883A1] sm:text-xs">
+                  Professional at work
+                </p>
+              </div>
+            </motion.div>
+
+            {/* FLOATING CARD 2 */}
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute bottom-[12%] right-0 z-20 flex items-center gap-2 rounded-xl border border-gray-100 bg-white p-3 shadow-[0_10px_30px_rgba(7,62,108,0.10)] sm:right-1 sm:gap-3 sm:p-4"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-green-50 text-green-600 sm:h-11 sm:w-11">
+                <CheckCircle2 size={21} />
+              </div>
+
+              <div>
+                <p className="text-[11px] font-bold text-[#073E6C] sm:text-sm">
+                  Service Done
+                </p>
+
+                <p className="text-[9px] text-[#6883A1] sm:text-xs">
+                  Job completed
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* RIGHT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: 35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="w-full lg:pl-4 xl:pl-8"
+          >
+            {/* STEP NUMBER */}
+            <div className="mb-5 flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#073E6C] text-base font-bold text-white shadow-lg shadow-[#073E6C]/15 sm:h-14 sm:w-14 sm:text-lg">
+                05
+              </div>
+
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[2px] text-[#FE8C00] sm:text-xs">
+                  Step Five
+                </p>
+
+                <p className="mt-1 text-xs font-medium text-[#6883A1]">
+                  Get professional service at your location
+                </p>
+              </div>
             </div>
 
             {/* TITLE */}
             <h2
-              style={{ fontFamily: "Inter, sans-serif" }}
-              className="
-                text-[22px]
-                font-bold
-                leading-tight
-                text-[#092e5c]
-
-                min-[400px]:text-2xl
-
-                sm:text-3xl
-
-                md:text-[32px]
-
-                lg:text-[30px]
-
-                xl:text-[32px]
-              "
+              style={{ fontFamily: "Amplesoft, sans-serif" }}
+              className="text-[28px] font-bold leading-tight text-[#073E6C] min-[400px]:text-3xl sm:text-4xl md:text-[42px] lg:text-[38px] xl:text-[44px]"
             >
-              Get Your Service Done
+              Get Your
+              <span className="block text-[#63B9D5]">
+                Service Done
+              </span>
             </h2>
 
             {/* SUBTITLE */}
-            <p
-              style={{ fontFamily: "Inter, sans-serif" }}
-              className="
-                mt-2
-                text-[13px]
-                font-semibold
-                text-[#63B9D5]
-
-                min-[400px]:text-sm
-
-                sm:text-base
-              "
-            >
+            <p className="mt-3 text-base font-semibold text-[#FE8C00] sm:text-lg">
               The technician comes to your location.
             </p>
 
             {/* DESCRIPTION */}
-            <p
-              style={{ fontFamily: "Inter, sans-serif" }}
-              className="
-                mt-3
-                text-[12px]
-                leading-6
-                text-[#6883a1]
-
-                min-[400px]:text-[13px]
-
-                sm:text-sm
-                sm:leading-7
-
-                md:text-[15px]
-              "
-            >
+            <p className="mt-4 max-w-[560px] text-sm leading-7 text-[#6883A1] sm:text-base sm:leading-8">
               After your request is accepted, the technician comes to your
               location and provides the requested service. From home repairs
               and electrical work to plumbing, AC servicing, appliance repair,
@@ -206,38 +159,57 @@ const Section5 = () => {
               service professionals easier.
             </p>
 
-            {/* ICON */}
-            <div
-              className="
-                mt-2
-                inline-flex
-                items-center
-                rounded-full
-                px-3
-              "
-            >
-              <div
-                className="
-                  flex
-                  h-9
-                  w-9
-                  items-center
-                  justify-center
-                  rounded-full
+            {/* INFORMATION CARDS */}
+            <div className="mt-7 grid grid-cols-1 gap-3 min-[400px]:grid-cols-2 sm:mt-8 sm:gap-4">
 
-                  sm:h-10
-                  sm:w-10
-                "
-              >
-                <Image
-                  src="/icon-pin.png"
-                  width={30}
-                  height={30}
-                  alt="Service completed"
-                />
+              {/* FEATURE 1 */}
+              <div className="flex items-center gap-3 rounded-xl border border-[#073E6C]/10 bg-white p-3 shadow-sm sm:p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#FE8C00]/10 text-[#FE8C00]">
+                  <MapPin size={20} />
+                </div>
+
+                <div>
+                  <p className="text-xs font-bold text-[#073E6C] sm:text-sm">
+                    At Your Location
+                  </p>
+
+                  <p className="mt-0.5 text-[10px] text-[#6883A1] sm:text-xs">
+                    Convenient home service
+                  </p>
+                </div>
+              </div>
+
+              {/* FEATURE 2 */}
+              <div className="flex items-center gap-3 rounded-xl border border-[#073E6C]/10 bg-white p-3 shadow-sm sm:p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#63B9D5]/15 text-[#073E6C]">
+                  <ShieldCheck size={20} />
+                </div>
+
+                <div>
+                  <p className="text-xs font-bold text-[#073E6C] sm:text-sm">
+                    Professional Service
+                  </p>
+
+                  <p className="mt-0.5 text-[10px] text-[#6883A1] sm:text-xs">
+                    Everyday service needs
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+
+            {/* BOTTOM NOTE */}
+            <div className="mt-6 flex items-start gap-3 rounded-xl bg-[#F8FAFC] p-4 sm:mt-8">
+              <CheckCircle2
+                size={20}
+                className="mt-0.5 shrink-0 text-[#FE8C00]"
+              />
+
+              <p className="text-xs leading-6 text-[#6883A1] sm:text-sm">
+                From booking to completion, Ekhoon makes it easier to get
+                everyday services right at your location.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

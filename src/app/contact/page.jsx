@@ -391,7 +391,7 @@ const page = () => {
 
                 <div className="mt-4 flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2">
                   <span className="text-xs font-semibold text-gray-800">
-                    +880 9XX- EKHOON
+                    +880 1919800060
                   </span>
 
                   <button className="rounded-md bg-[#073E6C] px-2.5 py-1 text-[9px] font-medium text-white">

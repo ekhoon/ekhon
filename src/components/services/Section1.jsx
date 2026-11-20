@@ -1,302 +1,231 @@
+
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
+import {
+  ArrowRight,
+  Smartphone,
+  Download,
+  CheckCircle2,
+  Wrench,
+  MapPin,
+} from "lucide-react";
 
 const Section1 = () => {
+  const services = [
+    "Electrician",
+    "Plumber",
+    "AC Technician",
+    "TV Repair",
+    "Appliance Repair",
+  ];
+
   return (
-    <section className="w-full overflow-hidden bg-white">
-      <div
-        className="
-          mx-auto
-          flex
-          min-h-[500px]
-          w-full
-          max-w-[1540px]
-          items-center
-          gap-8
+    <section className="relative w-full overflow-hidden bg-[#F8FAFC]">
+      {/* BACKGROUND DECORATIONS */}
+      <div className="pointer-events-none absolute -left-32 top-0 h-72 w-72 rounded-full bg-[#63B9D5]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#FE8C00]/10 blur-3xl" />
 
-          px-3
-          py-10
+      <div className="relative mx-auto grid w-full max-w-[1540px] grid-cols-1 items-center gap-10 px-4 py-12 min-[400px]:py-14 sm:gap-12 sm:px-6 sm:py-16 md:px-12 md:py-20 lg:grid-cols-2 lg:gap-12 lg:px-20 lg:py-24">
 
-          min-[400px]:px-4
-          min-[400px]:py-12
-
-          sm:px-6
-          sm:py-14
-
-          md:px-12
-          md:py-16
-
-          lg:gap-12
-          lg:px-20
-          lg:py-16
-        "
-      >
-        {/* ================= LEFT CONTENT ================= */}
-        <div
-          className="
-            flex
-            w-full
-            flex-col
-            items-start
-
-            lg:w-1/2
-          "
+        {/* LEFT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -35 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative z-10 flex w-full flex-col items-start lg:pr-4 xl:pr-8"
         >
-          {/* Small Badge */}
-          <div
-            className="
-              mb-4
-              rounded-full
-              border
-              border-gray-200
-              bg-white
-              px-3
-              py-1
-              text-[10px]
-              font-medium
-              text-gray-700
-              shadow-sm
-
-              min-[400px]:text-[11px]
-            "
-          >
-            Reliable On-Demand Home Services in Bangladesh
+          {/* BADGE */}
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#63B9D5]/25 bg-white px-3 py-2 shadow-sm sm:px-4">
+            <span className="flex h-2 w-2 rounded-full bg-green-500" />
+            <span className="text-[10px] font-semibold text-[#073E6C] min-[400px]:text-xs">
+              Your Everyday Home Service Partner
+            </span>
           </div>
 
-          {/* Heading */}
+          {/* HEADING */}
           <h1
-            className="
-              max-w-[560px]
-              text-[30px]
-              font-bold
-              leading-[1.12]
-              tracking-tight
-              text-gray-900
-
-              min-[400px]:text-[34px]
-
-              sm:text-4xl
-
-              md:text-[42px]
-
-              lg:text-[46px]
-            "
+            style={{ fontFamily: "Amplesoft, sans-serif" }}
+            className="max-w-[650px] text-[34px] font-bold leading-[1.13] tracking-tight text-[#073E6C] min-[400px]:text-[38px] sm:text-5xl md:text-[54px] lg:text-[48px] xl:text-[58px]"
           >
-            Home Services,
-            <br />
-            Whenever You Need Them
+            Home Services
+            <span className="block text-[#63B9D5]">
+              Made Easier with
+            </span>
+            <span className="block">
+              Ekhoon App.
+            </span>
           </h1>
 
-          {/* Description */}
-          <p
-            className="
-              mt-4
-              w-full
-              max-w-[520px]
-              text-[12px]
-              leading-6
-              text-gray-600
-
-              min-[400px]:text-[13px]
-
-              sm:text-[15px]
-              sm:leading-7
-
-              md:text-base
-            "
-          >
-            Find trusted professionals for everyday repair, maintenance, and
-            installation services. From electricians and plumbers to AC
-            technicians and appliance repair specialists, Ekhoon helps you
-            connect with the right service professional near you.
+          {/* SUBTITLE */}
+          <p className="mt-4 text-sm font-semibold text-[#FE8C00] sm:text-base">
+            Find. Request. Get it done.
           </p>
 
-          {/* Services */}
-          <div
-            className="
-              mt-5
-              flex
-              flex-wrap
-              gap-x-4
-              gap-y-2
-              text-[11px]
-              text-gray-600
+          {/* DESCRIPTION */}
+          <p className="mt-3 max-w-[540px] text-[13px] leading-7 text-[#6883A1] min-[400px]:text-sm sm:text-base sm:leading-8">
+            Discover service professionals, send your service requests,
+            and connect with technicians through the Ekhoon mobile app.
+            Get a simpler way to manage your everyday home service needs.
+          </p>
 
-              min-[400px]:gap-x-5
-              min-[400px]:text-xs
-            "
-          >
-            <span>All Services</span>
-            <span>Electrician</span>
-            <span>Plumber</span>
-            <span>AC Technician</span>
-            <span>TV Repair</span>
-            <span>Appliance Repair</span>
-            <span>+ More</span>
+          {/* SERVICES */}
+          <div className="mt-6 flex max-w-[560px] flex-wrap gap-2">
+            {services.map((service) => (
+              <span
+                key={service}
+                className="rounded-full border border-[#073E6C]/10 bg-white px-3 py-2 text-[10px] font-medium text-[#6883A1] shadow-sm min-[400px]:text-xs"
+              >
+                {service}
+              </span>
+            ))}
+
+            <span className="rounded-full border border-[#FE8C00]/20 bg-[#FE8C00]/5 px-3 py-2 text-[10px] font-semibold text-[#FE8C00] min-[400px]:text-xs">
+              + More
+            </span>
           </div>
 
-          {/* Buttons */}
-          <div
-            className="
-              mt-6
-              flex
-              flex-wrap
-              items-center
-              gap-2
-
-              min-[400px]:gap-3
-            "
-          >
-            <Link
-              href="/services"
-              className="
-                rounded-full
-                bg-gray-900
-                px-4
-                py-2.5
-                text-[11px]
-                font-medium
-                text-white
-                transition
-                hover:bg-gray-700
-
-                min-[400px]:px-5
-                min-[400px]:text-xs
-              "
-            >
-              Find a Service →
-            </Link>
+          {/* ACTION BUTTONS */}
+          <div className="mt-7 flex w-full flex-wrap items-center gap-3 sm:mt-8">
 
             <Link
               href="/services"
-              className="
-                rounded-full
-                border
-                border-gray-300
-                bg-white
-                px-4
-                py-2.5
-                text-[11px]
-                font-medium
-                text-gray-800
-                transition
-                hover:bg-gray-50
-
-                min-[400px]:px-5
-                min-[400px]:text-xs
-              "
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#073E6C] px-5 py-3 text-xs font-semibold text-white shadow-lg shadow-[#073E6C]/15 transition hover:bg-[#092e5c] min-[400px]:px-6 sm:text-sm"
             >
-              ⌕ Find a service
+              Explore Services
+              <ArrowRight size={16} />
             </Link>
 
             <Link
               href="/request-service"
-              className="
-                rounded-full
-                border
-                border-gray-300
-                bg-white
-                px-4
-                py-2.5
-                text-[11px]
-                font-medium
-                text-gray-800
-                transition
-                hover:bg-gray-50
-
-                min-[400px]:px-5
-                min-[400px]:text-xs
-              "
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#073E6C]/15 bg-white px-5 py-3 text-xs font-semibold text-[#073E6C] transition hover:bg-[#073E6C]/5 min-[400px]:px-6 sm:text-sm"
             >
-              ♡ Send a request
-            </Link>
-
-            <Link
-              href="/get-started"
-              className="
-                text-[11px]
-                font-medium
-                text-gray-700
-                transition
-                hover:text-black
-
-                min-[400px]:text-xs
-              "
-            >
-              Get it done →
+              <Wrench size={16} />
+              Send a Request
             </Link>
           </div>
-        </div>
 
-        {/* ================= RIGHT IMAGE ================= */}
-        <div
-          className="
-            relative
-            hidden
-            w-full
+          {/* APP INFORMATION */}
+          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-[#073E6C]/10 pt-5 sm:mt-9">
 
-            lg:block
-            lg:w-1/2
-          "
-        >
-          <div
-            className="
-              relative
-              ml-auto
-              aspect-[1.12/1]
-              w-full
-              max-w-[570px]
-              overflow-hidden
-              rounded-2xl
-              bg-gray-100
-            "
-          >
-            <Image
-              src="/service_banner.png"
-              alt="Home service"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 0vw, 50vw"
-            />
+            <div className="flex items-center gap-2">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#63B9D5]/15 text-[#073E6C]">
+                <Smartphone size={18} />
+              </div>
 
-            {/* Image floating info */}
-            <div
-              className="
-                absolute
-                bottom-3
-                left-3
-                rounded-xl
-                border
-                border-white/60
-                bg-white/90
-                px-3
-                py-2
-                shadow-lg
-                backdrop-blur-md
+              <div>
+                <p className="text-[10px] font-bold text-[#073E6C] sm:text-xs">
+                  Mobile App
+                </p>
+                <p className="text-[9px] text-[#6883A1] sm:text-[11px]">
+                  A convenient experience
+                </p>
+              </div>
+            </div>
 
-                sm:bottom-5
-                sm:left-5
-                sm:px-4
-                sm:py-3
-              "
-            >
-              <p className="text-[9px] font-medium text-gray-500 sm:text-[10px]">
-                Available Across Major Cities
-              </p>
+            <div className="flex items-center gap-2">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-50 text-green-600">
+                <CheckCircle2 size={18} />
+              </div>
 
-              <p className="mt-1 text-[11px] font-semibold text-gray-800 sm:text-xs">
-                Dhaka • Chattogram • Sylhet
-              </p>
-
-              <p className="text-[9px] text-gray-500 sm:text-[10px]">
-                Metro
-              </p>
+              <div>
+                <p className="text-[10px] font-bold text-[#073E6C] sm:text-xs">
+                  Easy Requests
+                </p>
+                <p className="text-[9px] text-[#6883A1] sm:text-[11px]">
+                  Connect with technicians
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
+
+        {/* RIGHT APP IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, x: 35, scale: 0.94 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="relative flex w-full items-center justify-center lg:justify-end"
+        >
+          {/* BACKGROUND SHAPE */}
+          <div className="absolute h-[85%] w-[85%] rounded-[40px] bg-[#073E6C]/5 sm:rounded-[55px]" />
+
+          {/* DECORATIVE CIRCLE */}
+          <div className="absolute right-[8%] top-[8%] h-14 w-14 rounded-full border-[9px] border-[#FE8C00]/20 sm:h-20 sm:w-20" />
+
+          <div className="absolute bottom-[8%] left-[8%] h-12 w-12 rounded-full bg-[#63B9D5]/20 sm:h-16 sm:w-16" />
+
+          {/* MAIN APP IMAGE */}
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="relative z-10 w-full max-w-[280px] min-[400px]:max-w-[310px] sm:max-w-[370px] md:max-w-[420px] lg:max-w-[450px] xl:max-w-[500px]"
+          >
+            <Image
+              src="/ekhon app2.png"
+              alt="Ekhoon mobile application preview"
+              width={620}
+              height={700}
+              priority
+              className="h-auto w-full object-contain drop-shadow-[0_20px_35px_rgba(7,62,108,0.14)]"
+              sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 500px"
+            />
+          </motion.div>
+
+          {/* FLOATING CARD 1 */}
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute left-0 top-[17%] z-20 flex items-center gap-2 rounded-xl border border-gray-100 bg-white p-2.5 shadow-[0_10px_30px_rgba(7,62,108,0.10)] min-[400px]:left-1 min-[400px]:p-3 sm:left-2 sm:gap-3 sm:p-4"
+          >
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#FE8C00]/10 text-[#FE8C00] sm:h-11 sm:w-11">
+              <MapPin size={20} />
+            </div>
+
+            <div>
+              <p className="text-[10px] font-bold text-[#073E6C] sm:text-sm">
+                Nearby Services
+              </p>
+              <p className="text-[8px] text-[#6883A1] sm:text-xs">
+                Find professionals
+              </p>
+            </div>
+          </motion.div>
+
+          {/* FLOATING CARD 2 */}
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-[14%] right-0 z-20 flex items-center gap-2 rounded-xl border border-gray-100 bg-white p-2.5 shadow-[0_10px_30px_rgba(7,62,108,0.10)] min-[400px]:right-1 min-[400px]:p-3 sm:right-2 sm:gap-3 sm:p-4"
+          >
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-green-50 text-green-600 sm:h-11 sm:w-11">
+              <CheckCircle2 size={20} />
+            </div>
+
+            <div>
+              <p className="text-[10px] font-bold text-[#073E6C] sm:text-sm">
+                Easy Booking
+              </p>
+              <p className="text-[8px] text-[#6883A1] sm:text-xs">
+                Request a service
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
