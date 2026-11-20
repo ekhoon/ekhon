@@ -135,7 +135,7 @@ const ProviderBanner = () => {
                 className="h-8 w-8 object-contain sm:h-14 sm:w-14"
               />
               <p className="mt-1 text-center text-[8px] font-bold text-[#073e6c] sm:text-xs">
-                Electrician
+                Appliance 
               </p>
             </motion.div>
 
@@ -153,7 +153,7 @@ const ProviderBanner = () => {
                 className="h-8 w-8 object-contain sm:h-14 sm:w-14"
               />
               <p className="mt-1 text-center text-[8px] font-bold text-[#073e6c] sm:text-xs">
-                Plumber
+                Electrician
               </p>
             </motion.div>
 
