@@ -59,8 +59,8 @@ export default function ProviderCTA() {
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
 
             {/* APP BUTTON */}
-            <a
-              href="#get-app"
+            <Link
+              href="/get-app"
               className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#FE8C00] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 sm:px-8"
             >
               <Smartphone size={19} />
@@ -70,7 +70,7 @@ export default function ProviderCTA() {
                 size={18}
                 className="transition-transform group-hover:translate-x-1"
               />
-            </a>
+            </Link>
 
             {/* CONTACT BUTTON */}
             <Link
