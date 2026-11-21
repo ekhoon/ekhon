@@ -1,3 +1,4 @@
+import ProviderCTA from '@/components/provider/ProviderCTA'
 import Section1 from '@/components/services/Section1'
 import Section2 from '@/components/services/Section2'
 import Section3 from '@/components/services/Section3'
@@ -11,6 +12,7 @@ const page = () => {
         <Section2/>
         <Section3/>
         <Section4/>
+        <ProviderCTA/>
     </div>
   )
 }

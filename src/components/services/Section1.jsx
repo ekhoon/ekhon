@@ -81,58 +81,7 @@ const Section1 = () => {
             </span>
           </div>
 
-          {/* ACTION BUTTONS */}
-          <div className="mt-7 flex w-full flex-wrap items-center gap-3 sm:mt-8">
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#073E6C] px-5 py-3 text-xs font-semibold text-white shadow-lg shadow-[#073E6C]/15 transition hover:bg-[#092e5c] min-[400px]:px-6 sm:text-sm"
-            >
-              Explore Services
-              <ArrowRight size={16} />
-            </Link>
-
-            <Link
-              href="/request-service"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#073E6C]/15 bg-white px-5 py-3 text-xs font-semibold text-[#073E6C] transition hover:bg-[#073E6C]/5 min-[400px]:px-6 sm:text-sm"
-            >
-              <Wrench size={16} />
-              Send a Request
-            </Link>
-          </div>
-
-          {/* APP INFORMATION */}
-          <div className="mt-8 flex w-full flex-wrap items-center gap-x-5 gap-y-3 border-t border-[#073E6C]/10 pt-5 sm:mt-9">
-
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#63B9D5]/15 text-[#073E6C]">
-                <Smartphone size={18} />
-              </div>
-
-              <div>
-                <p className="text-[10px] font-bold text-[#073E6C] sm:text-xs">
-                  Mobile App
-                </p>
-                <p className="text-[9px] text-[#6883A1] sm:text-[11px]">
-                  A convenient experience
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-600">
-                <CheckCircle2 size={18} />
-              </div>
-
-              <div>
-                <p className="text-[10px] font-bold text-[#073E6C] sm:text-xs">
-                  Easy Requests
-                </p>
-                <p className="text-[9px] text-[#6883A1] sm:text-[11px]">
-                  Connect with technicians
-                </p>
-              </div>
-            </div>
-          </div>
+   
         </motion.div>
 
         {/* RIGHT IPHONE MOCKUP */}

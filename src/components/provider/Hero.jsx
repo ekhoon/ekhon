@@ -66,7 +66,7 @@ const ProviderBanner = () => {
 
               {/* APP BUTTON */}
               <a
-                href="#get-app"
+                href="/get-app"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-7 py-3.5 text-sm font-semibold text-[#073e6c] transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:text-[#FE8C00]"
               >
                 <Smartphone size={18} />
